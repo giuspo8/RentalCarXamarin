@@ -4,20 +4,16 @@
              xmlns:local="clr-namespace:RentalCarXamarin"
              x:Class="RentalCarXamarin.MainPage">
 
-<StackLayout
-        VerticalOptions="FillAndExpand"
-        HorizontalOptions="FillAndExpand"
-        BackgroundColor="White">
-
-        <ScrollView VerticalOptions="FillAndExpand"
+    <ScrollView VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
+                    BackgroundColor="White"
                     Padding="0,0,0,0">
-            <StackLayout
+        <StackLayout
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="FillAndExpand"
                 Spacing="20">
 
-                <Button
+            <Button
                     Text="Nuova prenotazione"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
@@ -27,7 +23,7 @@
                     FontAttributes="Bold"
                     />
 
-                <Button
+            <Button
                     Text="Gestione Prenotazione"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
@@ -35,7 +31,7 @@
                     Margin="60,0,60,0"
                     />
 
-                <Button
+            <Button
                     Text="Contatti"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
@@ -43,7 +39,7 @@
                     Margin="60,0,60,0"
                     />
 
-                <Button
+            <Button
                     Text="Segnala problemi"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
@@ -51,7 +47,7 @@
                     Margin="60,0,60,0"
                     />
 
-                <Button
+            <Button
                     Text="FAQ"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
@@ -59,7 +55,7 @@
                     Margin="60,0,60,0"
                     />
 
-                <Button
+            <Button
                     Text="Area Amministratore"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
@@ -67,9 +63,8 @@
                     Margin="60,0,60,20"
                     />
 
-            </StackLayout>
-        </ScrollView>
-    </StackLayout>
+        </StackLayout>
+    </ScrollView>
 
 
 </ContentPage>
