@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalCarXamarin.StartPrenotazione">
+    <ContentPage.Content>
+
+        <StackLayout
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="White">
+
+            <ScrollView VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Padding="0,0,0,0">
+                <StackLayout
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Spacing="20">
+
+                    <Label
+                    Text="Ritiro"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    FontSize="20"
+                    />
+
+                    <StackLayout
+                    BackgroundColor="#FFC210"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    Orientation="Vertical"
+                    Margin="30,0,30,0">
+
+                        <StackLayout
+                        
+                        Orientation="Horizontal">
+
+                            <Label
+                        Text="Ciao"
+                        Margin="20,0,10,0"
+                        />
+
+                            <Label
+                        Text="Hello"
+                        Margin="10,0,20,0"
+                        />
+
+                        </StackLayout>
+
+                        <Label
+                        HorizontalOptions="Center"
+                        Text="Hi"
+                        Margin="0,0,0,0"
+                        />
+
+                    </StackLayout>
+
+                    <Label
+                    Text="Riconsegna"
+                    TextColor="Black"
+                    HorizontalOptions="Center"
+                    FontSize="20"
+                    />
+
+                    <StackLayout
+                    BackgroundColor="#FFC210"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    Orientation="Vertical"
+                    Margin="30,0,30,0">
+
+                        <StackLayout
+                        
+                        Orientation="Horizontal">
+
+                            <Label
+                        Text="Ciao"
+                        Margin="20,0,10,0"
+                        />
+
+                            <Label
+                        Text="Hello"
+                        Margin="10,0,20,0"
+                        />
+
+                        </StackLayout>
+
+                        <Label
+                        HorizontalOptions="Center"
+                        Text="Hi"
+                        Margin="0,0,0,0"
+                        />
+
+                    </StackLayout>
+
+                    <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    Orientation="Vertical"
+                    Spacing="10"
+                    Margin="0,20,0,20">
+
+                        <Button
+                    FontAttributes="Bold"
+                    Text="Cerca"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"
+                    />
+
+                        <Button
+                    Text="Home"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="End"
+                    VerticalOptions="End"
+                    WidthRequest="100"
+                    HeightRequest="60"
+                    FontSize="Small"
+                    Margin="0,0,20,0"
+                    />
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
