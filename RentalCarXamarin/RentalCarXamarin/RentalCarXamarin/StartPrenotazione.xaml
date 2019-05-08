@@ -4,103 +4,142 @@
              x:Class="RentalCarXamarin.StartPrenotazione">
     <ContentPage.Content>
 
-        <StackLayout
-        VerticalOptions="FillAndExpand"
-        HorizontalOptions="FillAndExpand"
-        BackgroundColor="White">
-
-            <ScrollView VerticalOptions="FillAndExpand"
+        <ScrollView VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
+                    BackgroundColor="White"
                     Padding="0,0,0,0">
-                <StackLayout
+
+            <StackLayout
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="FillAndExpand"
                 Spacing="20">
 
-                    <Label
+                <Label
                     Text="Ritiro"
                     TextColor="Black"
                     HorizontalOptions="Center"
                     FontSize="20"
                     />
 
-                    <StackLayout
+                <StackLayout
                     BackgroundColor="#FFC210"
-                    HorizontalOptions="CenterAndExpand"
+                    HorizontalOptions="FillAndExpand"
                     VerticalOptions="StartAndExpand"
                     Orientation="Vertical"
-                    Margin="30,0,30,0">
+                    Margin="40,0,40,0">
 
-                        <StackLayout
-                        
+                    <StackLayout
                         Orientation="Horizontal">
 
-                            <Label
-                        Text="Ciao"
-                        Margin="20,0,10,0"
-                        />
-
-                            <Label
-                        Text="Hello"
-                        Margin="10,0,20,0"
-                        />
-
-                        </StackLayout>
-
                         <Label
-                        HorizontalOptions="Center"
-                        Text="Hi"
-                        Margin="0,0,0,0"
+                        Text="Data: "
+                        Margin="10,10,0,0"
+                        TextColor="Black"
+                        FontSize="18"
                         />
+
+                        <DatePicker
+                                x:Name="DatePicker"
+                                HorizontalOptions="FillAndExpand"
+                                MinimumDate="05/01/2019"
+                                Format="dd/MM/yyyy"
+                                WidthRequest="180"
+                                FontSize="18"
+                                TextColor="Black"
+                                />
 
                     </StackLayout>
 
-                    <Label
+                    <StackLayout
+     
+                        Orientation="Horizontal">
+
+                        <Label
+                        Text="Ora: "
+                        Margin="10,10,0,0"
+                        TextColor="Black"
+                        FontSize="18"
+                        />
+
+                        <TimePicker
+                                x:Name="TimePicker"
+                                HorizontalOptions="FillAndExpand"
+                                WidthRequest="180"
+                                FontSize="18"
+                                TextColor="Black"
+                                />
+
+                    </StackLayout>
+
+                    <StackLayout
+                            Margin="0,0,10,0"
+                        Orientation="Horizontal">
+
+                        <Label
+                        Text="Stazione: "
+                        Margin="10,10,0,0"
+                        TextColor="Black"
+                        FontSize="18"
+                        />
+
+                        <Picker
+                                x:Name="Picker"
+                                HorizontalOptions="FillAndExpand"
+                                WidthRequest="180"
+                                FontSize="18"
+                                TextColor="Black"
+                                />
+
+                    </StackLayout>
+
+                </StackLayout>
+
+                <Label
                     Text="Riconsegna"
                     TextColor="Black"
                     HorizontalOptions="Center"
                     FontSize="20"
                     />
 
-                    <StackLayout
+                <StackLayout
                     BackgroundColor="#FFC210"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="StartAndExpand"
                     Orientation="Vertical"
                     Margin="30,0,30,0">
 
-                        <StackLayout
+                    <StackLayout
                         
                         Orientation="Horizontal">
 
-                            <Label
+                        <Label
                         Text="Ciao"
                         Margin="20,0,10,0"
                         />
 
-                            <Label
+                        <Label
                         Text="Hello"
                         Margin="10,0,20,0"
                         />
 
-                        </StackLayout>
+                    </StackLayout>
 
-                        <Label
+                    <Label
                         HorizontalOptions="Center"
                         Text="Hi"
                         Margin="0,0,0,0"
                         />
 
-                    </StackLayout>
+                </StackLayout>
 
-                    <StackLayout
+                <StackLayout
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="StartAndExpand"
                     Orientation="Vertical"
                     Spacing="10"
                     Margin="0,20,0,20">
 
-                        <Button
+                    <Button
                     FontAttributes="Bold"
                     Text="Cerca"
                     BackgroundColor="#FF8C00"
@@ -108,7 +147,7 @@
                     HorizontalOptions="CenterAndExpand"
                     />
 
-                        <Button
+                    <Button
                     Text="Home"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
@@ -119,11 +158,10 @@
                     FontSize="Small"
                     Margin="0,0,20,0"
                     />
-                    </StackLayout>
-
                 </StackLayout>
-            </ScrollView>
-        </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
 
     </ContentPage.Content>
 </ContentPage>
