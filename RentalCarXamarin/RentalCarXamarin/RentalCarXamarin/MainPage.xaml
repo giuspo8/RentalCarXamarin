@@ -4,11 +4,72 @@
              xmlns:local="clr-namespace:RentalCarXamarin"
              x:Class="RentalCarXamarin.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Rental car Magnificent!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+<StackLayout
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand"
+        BackgroundColor="White">
+
+        <ScrollView VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Padding="0,0,0,0">
+            <StackLayout
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Spacing="20">
+
+                <Button
+                    Text="Nuova prenotazione"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="60,20,60,0"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    />
+
+                <Button
+                    Text="Gestione Prenotazione"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="60,0,60,0"
+                    />
+
+                <Button
+                    Text="Contatti"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="60,0,60,0"
+                    />
+
+                <Button
+                    Text="Segnala problemi"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="60,0,60,0"
+                    />
+
+                <Button
+                    Text="FAQ"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="60,0,60,0"
+                    />
+
+                <Button
+                    Text="Area Amministratore"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="60,0,60,20"
+                    />
+
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
+
 
 </ContentPage>
