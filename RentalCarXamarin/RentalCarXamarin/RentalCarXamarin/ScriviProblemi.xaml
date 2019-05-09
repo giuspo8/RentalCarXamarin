@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalCarXamarin.ScriviProblemi">
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="White"
+                    Padding="0,0,0,0">
+            <StackLayout
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Spacing="20">
+
+                <Label
+                    Text="Segnala un problema"
+                    FontSize="20"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="0,20,0,0"
+                    />
+
+                <Entry
+                    Placeholder="Scrivi problema"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="20,0,20,0"
+                    HeightRequest="300"
+                    />
+
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="EndAndExpand"
+                    Orientation="Vertical"
+                    Spacing="0"
+                    Margin="0,20,0,20">
+
+                    <Button
+                    FontAttributes="Bold"
+                    Text="Invia"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"
+                    />
+
+                    <ImageButton
+                    Source="home.png"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    HorizontalOptions="End"
+                    VerticalOptions="End"
+                    Margin="0,0,20,0"
+                    />
+                </StackLayout>
+
+
+            </StackLayout>
+        </ScrollView>
+
+
+    </ContentPage.Content>
+</ContentPage>
