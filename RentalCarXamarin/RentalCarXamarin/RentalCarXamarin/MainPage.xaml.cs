@@ -13,5 +13,10 @@ namespace RentalCarXamarin
         {
             InitializeComponent();
         }
+        public async void nuova_prenotazione(object sender,EventArgs e)
+        {
+            await this.Navigation.PushAsync(new StartPrenotazione());
+        }
     }
+
 }

@@ -21,6 +21,7 @@
                     Margin="60,20,60,0"
                     FontSize="20"
                     FontAttributes="Bold"
+                    Clicked="nuova_prenotazione"
                     />
 
             <Button
