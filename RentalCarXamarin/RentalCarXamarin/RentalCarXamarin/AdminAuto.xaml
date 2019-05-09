@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalCarXamarin.AdminAuto">
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="White"
+                    Padding="0,0,0,0">
+
+            <StackLayout
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Margin="20,20,20,20"
+                Spacing="5">
+
+                <Label
+                 Text="Gestione auto"
+                 FontSize="20"
+                 TextColor="Black"
+                 HorizontalOptions="CenterAndExpand"
+                 Margin="0,0,0,0"
+                 />
+
+                <Entry
+                    Placeholder="Modello"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,0,0,0"
+                    TextColor="Black"
+                    />
+
+                <Entry
+                    Placeholder="Classe auto"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,0,0,0"
+                    TextColor="Black"
+                    />
+
+                <Entry
+                    Placeholder="Cambio"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,0,0,0"
+                    TextColor="Black"
+                    />
+
+                <Entry
+                    Placeholder="Numero di passeggeri"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,0,0,0"
+                    TextColor="Black"
+                    />
+
+                <Entry
+                    Placeholder="Prezzo giornaliero"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,0,0,20"
+                    TextColor="Black"
+                    />
+
+                <Button
+                    FontAttributes="Bold"
+                    Text="Aggiungi"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="180"
+                    />
+
+                <Button
+                    FontAttributes="Bold"
+                    Text="Elimina"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="180"
+                    />
+
+                <Button
+                    FontAttributes="Bold"
+                    Text="Torna indietro"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    WidthRequest="180"
+                    HorizontalOptions="CenterAndExpand"
+                    />
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
