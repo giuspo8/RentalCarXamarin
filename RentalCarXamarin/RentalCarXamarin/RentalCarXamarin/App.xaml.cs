@@ -11,7 +11,7 @@ namespace RentalCarXamarin
         {
             InitializeComponent();
 
-            MainPage = new ScriviProblemi();
+            MainPage = new AdminStazioni();
         }
 
         protected override void OnStart()
