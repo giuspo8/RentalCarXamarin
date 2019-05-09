@@ -195,6 +195,7 @@
                     HorizontalOptions="End"
                     VerticalOptions="End"
                     Margin="0,0,20,0"
+                    Clicked="backToHomeButton"
                     />
                 </StackLayout>
 

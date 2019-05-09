@@ -16,5 +16,10 @@ namespace RentalCarXamarin
         {
             InitializeComponent();
         }
+
+        public async void backToHomeButton(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new MainPage());
+        }
     }
 }

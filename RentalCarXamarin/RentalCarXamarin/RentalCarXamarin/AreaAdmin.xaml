@@ -51,6 +51,7 @@
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="150"
+                    Clicked="adminStationsButton"
                     />
 
                 <Button
@@ -60,6 +61,7 @@
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="150"
+                    Clicked="adminCarButton"
                     />
 
                 <ImageButton
@@ -68,6 +70,7 @@
                     WidthRequest="50"
                     HorizontalOptions="End"
                     VerticalOptions="End"
+                    Clicked="backToHomeButton"
                     />
             </StackLayout>
         </ScrollView>

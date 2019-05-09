@@ -13,10 +13,39 @@ namespace RentalCarXamarin
         {
             InitializeComponent();
         }
-        public async void nuova_prenotazione(object sender,EventArgs e)
+
+        //questi metodi sono relativi ai click sui buttoni nel menu e semplicemente spostano 
+        //la navigazione su un'altra pagina
+        public async void newReservationButton(object sender,EventArgs e)
         {
             await this.Navigation.PushAsync(new StartPrenotazione());
         }
+
+        public async void manageReservationButton(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new ModificaPrenotazione());
+        }
+
+        public async void contactsButton(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new Contatti());
+        }
+
+        public async void segnalationsButton(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new ScriviProblemi());
+        }
+
+        public async void faqButton(object sender, EventArgs e)
+        {
+            
+        }
+
+        public async void adminButton(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new AreaAdmin());
+        }
+
     }
 
 }

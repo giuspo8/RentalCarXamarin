@@ -83,6 +83,7 @@
                     TextColor="Black"
                     WidthRequest="180"
                     HorizontalOptions="CenterAndExpand"
+                    Clicked="backButton"
                     />
 
             </StackLayout>

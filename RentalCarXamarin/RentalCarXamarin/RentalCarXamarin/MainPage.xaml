@@ -21,7 +21,7 @@
                     Margin="60,20,60,0"
                     FontSize="20"
                     FontAttributes="Bold"
-                    Clicked="nuova_prenotazione"
+                    Clicked="newReservationButton"
                     />
 
             <Button
@@ -30,6 +30,7 @@
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
                     Margin="60,0,60,0"
+                    Clicked="manageReservationButton"
                     />
 
             <Button
@@ -38,6 +39,7 @@
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
                     Margin="60,0,60,0"
+                    Clicked="contactsButton"
                     />
 
             <Button
@@ -46,6 +48,7 @@
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
                     Margin="60,0,60,0"
+                    Clicked="segnalationsButton"
                     />
 
             <Button
@@ -54,6 +57,7 @@
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
                     Margin="60,0,60,0"
+                    Clicked="faqButton"
                     />
 
             <Button
@@ -62,6 +66,7 @@
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
                     Margin="60,0,60,20"
+                    Clicked="adminButton"
                     />
 
         </StackLayout>
