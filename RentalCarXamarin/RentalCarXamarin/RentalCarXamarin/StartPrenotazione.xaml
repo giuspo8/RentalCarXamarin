@@ -12,7 +12,8 @@
             <StackLayout
                 VerticalOptions="FillAndExpand"
                 HorizontalOptions="FillAndExpand"
-                Spacing="20">
+                Margin="20,10,20,20"
+                Spacing="10">
 
                 <Label
                     x:Name="ritiro"
@@ -20,7 +21,6 @@
                     TextColor="Black"
                     HorizontalOptions="Center"
                     FontSize="20"
-                    Margin="0,20,0,0"
                     FontAttributes="Bold"
                     />
 
@@ -28,66 +28,67 @@
                     BackgroundColor="#FFC210"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="StartAndExpand"
-                    Orientation="Vertical"
-                    Margin="30,0,30,0">
+                    Spacing="0"
+                    Orientation="Vertical">
 
                     <StackLayout
-                        Margin="0,0,10,0"
+                        Margin="10,0,10,0"
                         Orientation="Horizontal">
 
                         <Label
                         Text="Data: "
-                        Margin="10,10,0,0"
                         TextColor="Black"
-                        FontSize="18"
+                        FontSize="16"
+                        Margin="0,15,0,0"
                         />
 
                         <DatePicker
                                 x:Name="DatePickerRit"
                                 HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Start"
                                 MinimumDate="05/01/2019"
                                 Format="dd/MM/yyyy"
-                                FontSize="18"
+                                FontSize="16"
                                 TextColor="Black"
                                 />
 
                     </StackLayout>
 
                     <StackLayout
-                        Margin="0,0,10,0"
+                        Margin="10,0,10,0"
                         Orientation="Horizontal">
 
                         <Label
                         Text="Ora: "
-                        Margin="10,10,0,0"
+                        Margin="0,15,0,0"
                         TextColor="Black"
-                        FontSize="18"
+                        FontSize="16"
                         />
 
                         <TimePicker
                                 x:Name="TimePickerRit"
                                 HorizontalOptions="FillAndExpand"
-                                FontSize="18"
+                                FontSize="16"
                                 TextColor="Black"
                                 />
 
                     </StackLayout>
 
                     <StackLayout
-                        Margin="0,0,10,10"
+                        Margin="10,0,10,5"
                         Orientation="Horizontal">
 
                         <Label
                         Text="Stazione: "
-                        Margin="10,10,0,0"
+                        Margin="0,15,0,0"
                         TextColor="Black"
-                        FontSize="18"
+                        FontSize="16"
                         />
 
                         <Picker
                                 x:Name="PickerRit"
                                 HorizontalOptions="FillAndExpand"
-                                FontSize="18"
+                                FontSize="16"
                                 TextColor="Black"
                                 />
 
@@ -107,18 +108,17 @@
                     BackgroundColor="#FFC210"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="StartAndExpand"
-                    Orientation="Vertical"
-                    Margin="30,0,30,0">
+                    Orientation="Vertical">
 
                     <StackLayout
-                        Margin="0,0,10,0"
+                        Margin="10,0,10,0"
                         Orientation="Horizontal">
 
                         <Label
                         Text="Data: "
-                        Margin="10,10,0,0"
+                        Margin="0,15,0,0"
                         TextColor="Black"
-                        FontSize="18"
+                        FontSize="16"
                         />
 
                         <DatePicker
@@ -126,47 +126,47 @@
                                 HorizontalOptions="FillAndExpand"
                                 MinimumDate="05/01/2019"
                                 Format="dd/MM/yyyy"
-                                FontSize="18"
+                                FontSize="16"
                                 TextColor="Black"
                                 />
 
                     </StackLayout>
 
                     <StackLayout
-                        Margin="0,0,10,0"
+                        Margin="10,0,10,0"
                         Orientation="Horizontal">
 
                         <Label
                         Text="Ora: "
-                        Margin="10,10,0,0"
+                        Margin="0,15,0,0"
                         TextColor="Black"
-                        FontSize="18"
+                        FontSize="16"
                         />
 
                         <TimePicker
                                 x:Name="TimePickerRic"
                                 HorizontalOptions="FillAndExpand"
-                                FontSize="18"
+                                FontSize="16"
                                 TextColor="Black"
                                 />
 
                     </StackLayout>
 
                     <StackLayout
-                        Margin="0,0,10,10"
+                        Margin="10,0,10,5"
                         Orientation="Horizontal">
 
                         <Label
                         Text="Stazione: "
-                        Margin="10,10,0,0"
+                        Margin="0,15,0,0"
                         TextColor="Black"
-                        FontSize="18"
+                        FontSize="16"
                         />
 
                         <Picker
                                 x:Name="PickerRic"
                                 HorizontalOptions="FillAndExpand"
-                                FontSize="18"
+                                FontSize="16"
                                 TextColor="Black"
                                 />
 
