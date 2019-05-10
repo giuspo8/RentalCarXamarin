@@ -15,6 +15,7 @@
                 Spacing="20">
 
                 <Label
+                    x:Name="ritiro"
                     Text="Ritiro"
                     TextColor="Black"
                     HorizontalOptions="Center"
@@ -186,6 +187,7 @@
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
+                    Clicked="carchoosing"
                     />
 
                     <ImageButton

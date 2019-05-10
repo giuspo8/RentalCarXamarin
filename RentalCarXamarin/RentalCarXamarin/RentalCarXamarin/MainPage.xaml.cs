@@ -38,7 +38,7 @@ namespace RentalCarXamarin
 
         public async void faqButton(object sender, EventArgs e)
         {
-            
+            await this.Navigation.PushAsync(new faq());
         }
 
         public async void adminButton(object sender, EventArgs e)
