@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RentalCarXamarin.Contatti">
+             x:Class="RentalCarXamarin.Contatti"
+             Title="Contatti">
     <ContentPage.Content>
 
         <ScrollView VerticalOptions="FillAndExpand"
@@ -9,13 +10,14 @@
                     BackgroundColor="White"
                     Padding="0,0,0,0">
             <StackLayout
-                VerticalOptions="StartAndExpand"
+                VerticalOptions="FillAndExpand"
                 HorizontalOptions="FillAndExpand"
                 Spacing="20">
 
                 <StackLayout
                  Orientation="Horizontal"
                  HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
                     Spacing="5"
                     Margin="20,20,10,0"
                  >
@@ -44,6 +46,7 @@
                 <StackLayout
                  Orientation="Horizontal"
                  HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
                     Spacing="5"
                     Margin="20,0,10,0"
                  >
@@ -72,6 +75,7 @@
                 <StackLayout
                  Orientation="Horizontal"
                  HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
                     Spacing="5"
                     Margin="20,0,10,0"
                  >
@@ -100,6 +104,7 @@
                 <StackLayout
                  Orientation="Horizontal"
                  HorizontalOptions="FillAndExpand"
+                    VerticalOptions="StartAndExpand"
                     Spacing="5"
                     Margin="20,0,10,0"
                  >
@@ -131,7 +136,7 @@
                     WidthRequest="50"
                     HorizontalOptions="End"
                     VerticalOptions="End"
-                    Margin="0,0,20,0"
+                    Margin="0,20,20,20"
                     Clicked="backToHomeButton"
                     />
 

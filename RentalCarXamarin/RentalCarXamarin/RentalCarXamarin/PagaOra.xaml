@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RentalCarXamarin.PagaOra">
+             x:Class="RentalCarXamarin.PagaOra"
+             Title="Pagamento">
     <ContentPage.Content>
 
         <ScrollView VerticalOptions="FillAndExpand"
@@ -19,46 +20,56 @@
                  Text="Pagare in stazione"
                  FontSize="20"
                  TextColor="Black"
+                 VerticalOptions="Start"
                  HorizontalOptions="CenterAndExpand"
                     Margin="0,0,0,10"
                  />
 
                 <Entry
+                    VerticalOptions="Start"
                     Placeholder="Nome*"
                     HorizontalOptions="FillAndExpand"
                     />
 
                 <Entry
+                    VerticalOptions="Start"
                     Placeholder="Cognome*"
                     HorizontalOptions="FillAndExpand"
                     />
 
                 <Entry
+                    VerticalOptions="Start"
                     Placeholder="E-mail*"
                     HorizontalOptions="FillAndExpand"
                     />
 
                 <Entry
+                    VerticalOptions="Start"
                     Placeholder="Telefono*"
                     HorizontalOptions="FillAndExpand"
                     />
 
                 <Entry
+                    VerticalOptions="Start"
+                    x:Name="CartaCredito"
                     Placeholder="Numero carta di credito*"
                     HorizontalOptions="FillAndExpand"
                     />
 
                 <Entry
+                    VerticalOptions="Start"
                     Placeholder="Data di scadenza*"
                     HorizontalOptions="FillAndExpand"
                     />
 
                 <Entry
+                    VerticalOptions="Start"
                     Placeholder="Codice di sicurezza*"
                     HorizontalOptions="FillAndExpand"
                     />
 
                 <Label
+                        VerticalOptions="StartAndExpand"
                         Text="*campo obbligatorio"
                         TextColor="Black"
                         HorizontalOptions="Start"
@@ -69,7 +80,7 @@
                     VerticalOptions="EndAndExpand"
                     Orientation="Vertical"
                     Spacing="0"
-                    Margin="0,20,0,0">
+                    Margin="0,20,0,20">
 
                     <Button
                     FontAttributes="Bold"

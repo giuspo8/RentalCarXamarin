@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RentalCarXamarin.AreaAdmin">
+             x:Class="RentalCarXamarin.AreaAdmin"
+             Title="Area admin">
     <ContentPage.Content>
 
         <ScrollView VerticalOptions="FillAndExpand"
@@ -10,41 +11,46 @@
                     Padding="0,0,0,0">
             
             <StackLayout
-                VerticalOptions="StartAndExpand"
+                VerticalOptions="FillAndExpand"
                 HorizontalOptions="FillAndExpand"
                 Margin="20,20,20,20"
-                Spacing="10">
+                Spacing="0">
 
                 <Label
                  Text="Pagina admin"
                  FontSize="20"
                  TextColor="Black"
                  HorizontalOptions="CenterAndExpand"
-                    Margin="0,0,0,10"
+                    VerticalOptions="Start"
                  />
 
                 <Entry
+                    Margin="0,10,0,0"
                     Placeholder="Inserire e-mail"
                     HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
                     />
 
                 <Entry
                     Placeholder="Inserire password"
                     WidthRequest="200"
                     HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Start"
                     />
 
                 <Button
-                    Margin="0,60,0,0"
+                    Margin="0,40,0,0"
                     FontAttributes="Bold"
                     Text="Prenotazioni"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="150"
+                    VerticalOptions="Start"
                     />
 
                 <Button
+                    Margin="0,10,0,0"
                     FontAttributes="Bold"
                     Text="Stazioni"
                     BackgroundColor="#FF8C00"
@@ -52,9 +58,11 @@
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="150"
                     Clicked="adminStationsButton"
+                    VerticalOptions="Start"
                     />
 
                 <Button
+                    Margin="0,10,0,0"
                     FontAttributes="Bold"
                     Text="Auto"
                     BackgroundColor="#FF8C00"
@@ -62,9 +70,11 @@
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="150"
                     Clicked="adminCarButton"
+                    VerticalOptions="StartAndExpand"
                     />
 
                 <ImageButton
+                    Margin="0,20,0,0"
                     Source="home.png"
                     HeightRequest="50"
                     WidthRequest="50"

@@ -1,21 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RentalCarXamarin.RiepilogoPrenotazione">
+             x:Class="RentalCarXamarin.RiepilogoPrenotazione"
+             Title="Riepilogo">
     <ContentPage.Content>
         <ScrollView VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
                     BackgroundColor="White"
                     Padding="0,0,0,0">
             <StackLayout
-                VerticalOptions="StartAndExpand"
+                VerticalOptions="FillAndExpand"
                 HorizontalOptions="FillAndExpand"
                 Spacing="10"
                 Margin="20,10,20,20">
 
                 <StackLayout
                     HorizontalOptions="FillAndExpand"
-                    VerticalOptions="StartAndExpand"
+                    VerticalOptions="Start"
                     Orientation="Vertical"
                     BackgroundColor="#FFC210"
                     Spacing="5"
@@ -45,7 +46,7 @@
 
                 <StackLayout
                     HorizontalOptions="FillAndExpand"
-                    VerticalOptions="StartAndExpand"
+                    VerticalOptions="Start"
                     Orientation="Vertical"
                     BackgroundColor="#FFC210"
                     Spacing="5"
@@ -73,13 +74,14 @@
 
                 </StackLayout>
 
-                <Label 
+                <Label
                 x:Name="macchina"
                 Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
+                VerticalOptions="Center" 
                 HorizontalOptions="CenterAndExpand" />
 
                 <Button
+                    VerticalOptions="Start"
                     FontAttributes="Bold"
                     Text="Paga ora"
                     BackgroundColor="#FF8C00"
@@ -89,6 +91,7 @@
                     />
 
                 <Button
+                    VerticalOptions="StartAndExpand"
                     FontAttributes="Bold"
                     Text="Paga in stazione"
                     BackgroundColor="#FF8C00"

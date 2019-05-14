@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RentalCarXamarin.ScriviProblemi">
+             x:Class="RentalCarXamarin.ScriviProblemi"
+             Title="Scrivi problemi">
     <ContentPage.Content>
 
         <ScrollView VerticalOptions="FillAndExpand"
@@ -9,7 +10,7 @@
                     BackgroundColor="White"
                     Padding="0,0,0,0">
             <StackLayout
-                VerticalOptions="StartAndExpand"
+                VerticalOptions="FillAndExpand"
                 HorizontalOptions="FillAndExpand"
                 Spacing="20">
 
@@ -17,15 +18,17 @@
                     Text="Segnala un problema"
                     FontSize="20"
                     TextColor="Black"
+                    VerticalOptions="Start"
                     HorizontalOptions="CenterAndExpand"
                     Margin="0,20,0,0"
                     />
 
-                <Entry
+                <Editor
                     Placeholder="Scrivi problema"
                     HorizontalOptions="FillAndExpand"
                     Margin="20,0,20,0"
-                    HeightRequest="300"
+                    VerticalOptions="StartAndExpand"
+                    HeightRequest="200"
                     />
 
                 <StackLayout

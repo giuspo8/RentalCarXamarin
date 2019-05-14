@@ -47,7 +47,7 @@
     <EmbeddedResource Update="SceltaAuto.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="SceltaStazione.xaml">
+    <EmbeddedResource Update="SceltaStaz.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ScriviProblemi.xaml">
