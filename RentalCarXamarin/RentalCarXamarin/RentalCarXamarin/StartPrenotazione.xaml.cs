@@ -30,7 +30,7 @@ namespace RentalCarXamarin
         }
         public void PickerSelectedIndexChanged(object sender, EventArgs e)
         {
-             lab.Text= PickerRit.Items[PickerRit.SelectedIndex];
+            //= PickerRit.Items[PickerRit.SelectedIndex];
         }
         public async void carchoosing(object sender, EventArgs e)
         {

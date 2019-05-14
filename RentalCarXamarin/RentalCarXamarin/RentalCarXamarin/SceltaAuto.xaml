@@ -8,21 +8,103 @@
                     HorizontalOptions="FillAndExpand"
                     BackgroundColor="White"
                     Padding="0,0,0,0">
-            <StackLayout
-                VerticalOptions="FillAndExpand"
-                HorizontalOptions="FillAndExpand"
-                Spacing="20"
-                Margin="0,20,0,20">
 
-                
-                <Label
-                        x:Name="lab"
-                        Text="Stazione: "
-                        Margin="0,15,0,0"
-                        TextColor="Black"
-                        FontSize="16"
-                        />
-            </StackLayout>
+            <ListView  x:Name="listView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout BackgroundColor="White"
+                             Orientation="Vertical">
+                                
+                                <StackLayout Orientation="Horizontal">
+                                    
+                                    <Image Source="{Binding image}" 
+                                           HorizontalOptions="Start"
+                                           WidthRequest="80"
+                                           HeightRequest="80"/>
+
+                                    <StackLayout
+                                        Orientation="Vertical"
+                                        HorizontalOptions="Start"
+                                        Spacing="2">
+
+                                        <Label Text="{Binding title}"
+                                        TextColor="Black" />
+
+                                        <StackLayout
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="Start"
+                                            Orientation="Horizontal"
+                                            Spacing="5">
+
+                                            <Label
+                                                HorizontalOptions="Start"
+                                                Text="Tipo"
+                                                TextColor="Black"/>
+                                            
+                                            <Label Text="{Binding tipo}"
+                                            HorizontalOptions="Start"
+                                            TextColor="black" />
+                                            
+                                        </StackLayout>
+
+                                        <StackLayout
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="Start"
+                                            Orientation="Horizontal"
+                                            Spacing="5">
+
+                                            <Label
+                                                HorizontalOptions="Start"
+                                                Text="Cambio"
+                                                TextColor="Black"/>
+
+                                            <Label Text="{Binding cambio}"
+                                            HorizontalOptions="Start"
+                                            TextColor="black" />
+
+                                        </StackLayout>
+
+                                        <StackLayout
+                                            VerticalOptions="Start"
+                                            Orientation="Horizontal"
+                                            HorizontalOptions="Start"
+                                            Spacing="5">
+
+                                            <Label
+                                                Text="N. Passeggeri"
+                                                TextColor="Black"/>
+
+                                            <Label Text="{Binding passeggeri}"
+                                            HorizontalOptions="Start"
+                                            TextColor="black" />
+
+                                        </StackLayout>
+
+                                        <StackLayout
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="Start"
+                                            Orientation="Horizontal"
+                                            Spacing="5">
+
+                                            <Label
+                                                Text="Costo"
+                                                TextColor="Black"/>
+
+                                            <Label Text="{Binding costo}"
+                                                HorizontalOptions="Start"
+                                                TextColor="black" />
+
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
