@@ -9,27 +9,30 @@
                     BackgroundColor="White"
                     Padding="0,0,0,0">
 
-            <ListView  x:Name="listView" ItemsSource="{Binding CarItems}">
+            <ListView  x:Name="listView" ItemsSource="{Binding CarItems}" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout BackgroundColor="White"
-                             Orientation="Vertical">
+                             Orientation="Vertical"
+                             VerticalOptions="FillAndExpand"
+                             Margin="0,0,0,0">
                                 
                                 <StackLayout Orientation="Horizontal">
                                     
                                     <Image Source="{Binding image}" 
-                                           HorizontalOptions="Start"
-                                           WidthRequest="80"
-                                           HeightRequest="80"/>
+                                           WidthRequest="100"
+                                           HeightRequest="100"
+                                           Margin="10,0,10,0"/>
 
                                     <StackLayout
                                         Orientation="Vertical"
                                         HorizontalOptions="Start"
-                                        Spacing="2">
+                                        Spacing="0">
 
                                         <Label Text="{Binding model}"
-                                        TextColor="Black" />
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
 
                                         <StackLayout
                                             VerticalOptions="Start"
@@ -39,8 +42,9 @@
 
                                             <Label
                                                 HorizontalOptions="Start"
-                                                Text="Tipo"
-                                                TextColor="Black"/>
+                                                Text="Tipo:"
+                                                TextColor="Black"
+                                                FontAttributes="Bold"/>
                                             
                                             <Label Text="{Binding type}"
                                             HorizontalOptions="Start"
@@ -56,8 +60,9 @@
 
                                             <Label
                                                 HorizontalOptions="Start"
-                                                Text="Cambio"
-                                                TextColor="Black"/>
+                                                Text="Cambio:"
+                                                TextColor="Black"
+                                                FontAttributes="Bold"/>
 
                                             <Label Text="{Binding shift}"
                                             HorizontalOptions="Start"
@@ -72,12 +77,17 @@
                                             Spacing="5">
 
                                             <Label
-                                                Text="N. Passeggeri"
-                                                TextColor="Black"/>
+                                                Text="N. Passeggeri:"
+                                                TextColor="Black"
+                                                FontAttributes="Bold"/>
 
                                             <Label Text="{Binding numberOfPassengers}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
+
+                                            <Label
+                                                Text="persone"
+                                                TextColor="Black"/>
 
                                         </StackLayout>
 
@@ -88,12 +98,17 @@
                                             Spacing="5">
 
                                             <Label
-                                                Text="Costo"
-                                                TextColor="Black"/>
+                                                Text="Costo:"
+                                                TextColor="Black"
+                                                FontAttributes="Bold"/>
 
                                             <Label Text="{Binding price}"
                                                 HorizontalOptions="Start"
                                                 TextColor="black" />
+
+                                            <Label
+                                                Text="€ al giorno"
+                                                TextColor="Black"/>
 
                                         </StackLayout>
 
