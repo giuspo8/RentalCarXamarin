@@ -9,7 +9,7 @@
                     BackgroundColor="White"
                     Padding="0,0,0,0">
 
-            <ListView  x:Name="listView">
+            <ListView  x:Name="listView" ItemsSource="{Binding CarItems}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -28,7 +28,7 @@
                                         HorizontalOptions="Start"
                                         Spacing="2">
 
-                                        <Label Text="{Binding title}"
+                                        <Label Text="{Binding model}"
                                         TextColor="Black" />
 
                                         <StackLayout
@@ -42,7 +42,7 @@
                                                 Text="Tipo"
                                                 TextColor="Black"/>
                                             
-                                            <Label Text="{Binding tipo}"
+                                            <Label Text="{Binding type}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
                                             
@@ -59,7 +59,7 @@
                                                 Text="Cambio"
                                                 TextColor="Black"/>
 
-                                            <Label Text="{Binding cambio}"
+                                            <Label Text="{Binding shift}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -75,7 +75,7 @@
                                                 Text="N. Passeggeri"
                                                 TextColor="Black"/>
 
-                                            <Label Text="{Binding passeggeri}"
+                                            <Label Text="{Binding numberOfPassengers}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -91,7 +91,7 @@
                                                 Text="Costo"
                                                 TextColor="Black"/>
 
-                                            <Label Text="{Binding costo}"
+                                            <Label Text="{Binding price}"
                                                 HorizontalOptions="Start"
                                                 TextColor="black" />
 

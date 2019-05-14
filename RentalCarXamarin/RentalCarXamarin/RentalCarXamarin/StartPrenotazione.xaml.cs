@@ -34,7 +34,7 @@ namespace RentalCarXamarin
         }
         public async void carchoosing(object sender, EventArgs e)
         {
-            await this.Navigation.PushAsync(new SceltaAuto(DateStringRic,DateStringRit,Stazione));
+            await this.Navigation.PushAsync(new SceltaAuto());
         }
         public async void backToHomeButton(object sender, EventArgs e)
         {
