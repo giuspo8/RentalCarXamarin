@@ -16,6 +16,7 @@
                 Spacing="10">
 
                 <Label
+                    VerticalOptions="Start"
                     x:Name="ritiro"
                     Text="Ritiro"
                     TextColor="Black"
@@ -97,6 +98,7 @@
                 </StackLayout>
 
                 <Label
+                    VerticalOptions="Start"
                     Text="Riconsegna"
                     TextColor="Black"
                     HorizontalOptions="Center"
@@ -196,7 +198,6 @@
                     WidthRequest="50"
                     HorizontalOptions="End"
                     VerticalOptions="End"
-                    Margin="0,0,20,0"
                     Clicked="backToHomeButton"
                     />
                 </StackLayout>

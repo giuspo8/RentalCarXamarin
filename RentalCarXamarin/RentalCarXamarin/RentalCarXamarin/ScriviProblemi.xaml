@@ -9,7 +9,7 @@
                     BackgroundColor="White"
                     Padding="0,0,0,0">
             <StackLayout
-                VerticalOptions="StartAndExpand"
+                VerticalOptions="FillAndExpand"
                 HorizontalOptions="FillAndExpand"
                 Spacing="20">
 
@@ -17,15 +17,17 @@
                     Text="Segnala un problema"
                     FontSize="20"
                     TextColor="Black"
+                    VerticalOptions="Start"
                     HorizontalOptions="CenterAndExpand"
                     Margin="0,20,0,0"
                     />
 
-                <Entry
+                <Editor
                     Placeholder="Scrivi problema"
                     HorizontalOptions="FillAndExpand"
                     Margin="20,0,20,0"
-                    HeightRequest="300"
+                    VerticalOptions="StartAndExpand"
+                    HeightRequest="200"
                     />
 
                 <StackLayout

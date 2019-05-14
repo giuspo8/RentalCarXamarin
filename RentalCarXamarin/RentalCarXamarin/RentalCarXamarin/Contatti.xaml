@@ -9,13 +9,14 @@
                     BackgroundColor="White"
                     Padding="0,0,0,0">
             <StackLayout
-                VerticalOptions="StartAndExpand"
+                VerticalOptions="FillAndExpand"
                 HorizontalOptions="FillAndExpand"
                 Spacing="20">
 
                 <StackLayout
                  Orientation="Horizontal"
                  HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
                     Spacing="5"
                     Margin="20,20,10,0"
                  >
@@ -44,6 +45,7 @@
                 <StackLayout
                  Orientation="Horizontal"
                  HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
                     Spacing="5"
                     Margin="20,0,10,0"
                  >
@@ -72,6 +74,7 @@
                 <StackLayout
                  Orientation="Horizontal"
                  HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
                     Spacing="5"
                     Margin="20,0,10,0"
                  >
@@ -100,6 +103,7 @@
                 <StackLayout
                  Orientation="Horizontal"
                  HorizontalOptions="FillAndExpand"
+                    VerticalOptions="StartAndExpand"
                     Spacing="5"
                     Margin="20,0,10,0"
                  >
@@ -131,7 +135,7 @@
                     WidthRequest="50"
                     HorizontalOptions="End"
                     VerticalOptions="End"
-                    Margin="0,0,20,0"
+                    Margin="0,20,20,20"
                     Clicked="backToHomeButton"
                     />
 
