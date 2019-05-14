@@ -12,9 +12,20 @@ namespace RentalCarXamarin
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class faq : ContentPage
 	{
-		public faq ()
+        List<string> lista = new List<string>();
+        public faq ()
 		{
 			InitializeComponent ();
-		}
-	}
+            
+            lista.Add("domanda1");
+            lista.Add("domanda2");
+            lst.ItemsSource = lista;
+        }
+        private async void itemsel(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = e.SelectedItem;
+            
+
+        }
+    }
 }

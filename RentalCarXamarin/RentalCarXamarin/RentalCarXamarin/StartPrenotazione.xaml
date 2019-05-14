@@ -79,10 +79,12 @@
                         Orientation="Horizontal">
 
                         <Label
+                        x:Name="stazione"
                         Text="Stazione: "
                         Margin="0,15,0,0"
                         TextColor="Black"
                         FontSize="16"
+                            
                         />
 
                         <Picker
@@ -90,7 +92,12 @@
                                 HorizontalOptions="FillAndExpand"
                                 FontSize="16"
                                 TextColor="Black"
-                                />
+                                Title="seleziona stazione">
+                                <Picker.Items>
+                                <x:String>Milano Stazione</x:String>
+                                <x:String>Ancona</x:String>
+                            </Picker.Items>
+                        </Picker>
 
                     </StackLayout>
 
@@ -157,6 +164,7 @@
                         Orientation="Horizontal">
 
                         <Label
+                        x:Name="stazione1"
                         Text="Stazione: "
                         Margin="0,15,0,0"
                         TextColor="Black"
@@ -165,10 +173,18 @@
 
                         <Picker
                                 x:Name="PickerRic"
+                                Title="seleziona stazione"
                                 HorizontalOptions="FillAndExpand"
                                 FontSize="16"
-                                TextColor="Black"
-                                />
+                                TextColor="Black">
+                           
+                            <Picker.Items>
+                                <x:String>Milano Stazione</x:String>
+                                <x:String>Ancona</x:String>
+                            </Picker.Items>
+                        </Picker>
+
+                                
 
                     </StackLayout>
 
@@ -180,7 +196,7 @@
                     Orientation="Vertical"
                     Spacing="0"
                     Margin="0,20,0,20">
-
+                    
                     <Button
                     FontAttributes="Bold"
                     Text="Cerca"

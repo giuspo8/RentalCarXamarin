@@ -13,10 +13,14 @@
                 Spacing="20"
                 Margin="0,20,0,0">
 
-                <ListView x:Name="lst"
-                      ItemSelected="itemsel">
-                </ListView>
                 
+                <Label
+                        x:Name="lab"
+                        Text="Stazione: "
+                        Margin="0,15,0,0"
+                        TextColor="Black"
+                        FontSize="16"
+                        />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

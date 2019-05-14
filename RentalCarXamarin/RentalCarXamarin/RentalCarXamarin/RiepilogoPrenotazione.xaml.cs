@@ -12,10 +12,10 @@ namespace RentalCarXamarin
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class RiepilogoPrenotazione : ContentPage
 	{
-		public RiepilogoPrenotazione (string time,string macchi)
+		public RiepilogoPrenotazione (string timeric, string timerit, string modello)
 		{
 			InitializeComponent ();
-            macchina.Text = time;
+            
 		}
 	}
 }
