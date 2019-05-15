@@ -23,9 +23,17 @@ namespace RentalCarXamarin
                 DataScadenza.IsVisible = false;
                 CodiceSicurezza.IsVisible = false;
             }
-		}
-        
- 
+            //impostiamo data minima per scadenza carta
+            DataScadenza.SetValue(DatePicker.MinimumDateProperty, DateTime.Now);
+            
+        }
+
+        public async void backToHomeButton(object sender, EventArgs e)
+        {
+            //ritorno alla home
+            await this.Navigation.PopToRootAsync();
+
+        }
 
         public async void ConfirmButton(object sender, EventArgs e)
         {
@@ -35,8 +43,7 @@ namespace RentalCarXamarin
             {
                 await DisplayAlert("Attenzione", "Per favore riempire tutti i campi", "OK");
             }
-            else if(payment&&(string.IsNullOrEmpty(CartaCredito.Text) || string.IsNullOrEmpty(DataScadenza.Text) ||
-                    string.IsNullOrEmpty(CodiceSicurezza.Text)))
+            else if(payment&&(string.IsNullOrEmpty(CartaCredito.Text) || string.IsNullOrEmpty(CodiceSicurezza.Text)))
             {
                 await DisplayAlert("Attenzione", "Per favore riempire tutti i campi", "OK");
             }

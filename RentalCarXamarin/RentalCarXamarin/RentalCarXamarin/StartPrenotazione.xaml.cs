@@ -49,10 +49,18 @@ namespace RentalCarXamarin
             }
             else {
                 //salvo tutti i valori sul dizionario properties
-                String dateRetire = DatePickerRit.Date.ToString() + " " + TimePickerRit.Time.ToString();
-                String dateRestitution = DatePickerRic.Date.ToString() + " " + TimePickerRic.Time.ToString();
-                String stationRetire = PickerRit.ToString();
-                String stationRestitution = PickerRic.ToString();
+                String dateRetire = DatePickerRit.Date.Day+"/"+ DatePickerRit.Date.Month +
+                    "/"+ DatePickerRit.Date.Year+" " + TimePickerRit.Time;
+                String dateRestitution = DatePickerRic.Date.Day + "/" + DatePickerRic.Date.Month +
+                    "/" + DatePickerRic.Date.Year + " " + TimePickerRic.Time;
+                String stationRetire = PickerRit.Items[PickerRit.SelectedIndex];
+                String stationRestitution = PickerRic.Items[PickerRic.SelectedIndex];
+                Double days = ((DateTime)DatePickerRic.Date-(DateTime)DatePickerRit.Date).TotalDays;
+                Application.Current.Properties["dateRetire"] = dateRetire;
+                Application.Current.Properties["dateRestitution"] = dateRestitution;
+                Application.Current.Properties["stationRetire"] = stationRetire;
+                Application.Current.Properties["stationRestitution"] = stationRestitution;
+                Application.Current.Properties["days"] = days;
                 //passiamo alla page sceltaauto
                 await this.Navigation.PushAsync(new SceltaAuto());
             }

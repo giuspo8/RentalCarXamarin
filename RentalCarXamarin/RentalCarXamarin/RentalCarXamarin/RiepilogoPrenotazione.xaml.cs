@@ -12,10 +12,25 @@ namespace RentalCarXamarin
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RiepilogoPrenotazione : ContentPage
     {
+        String RetireStation = (String)Application.Current.Properties["stationRetire"];
+        String RestitutionStation = (String)Application.Current.Properties["stationRestitution"];
+        String RetireDate = (String)Application.Current.Properties["dateRetire"];
+        String RestitutionDate = (String)Application.Current.Properties["dateRestitution"];
+        Double price = (Double)Application.Current.Properties["price"];
+        Double days = (Double)Application.Current.Properties["days"];
+
         public RiepilogoPrenotazione()
         {
             InitializeComponent();
             BindingContext = new CarChoosedModel();
+            DataRit.Text = RetireDate;
+            DataRic.Text = RestitutionDate;
+            ricStation.Text = RestitutionStation;
+            retStation.Text = RetireStation;
+            Double totalPrice = (price*days)+price;
+            Double totalPriceStation = totalPrice+25;
+            paynow.Text = "paga ora (" + totalPrice + "€)";
+            paystation.Text = "paga alla stazione (" + totalPriceStation + "€)";
         }
         
 
@@ -32,6 +47,7 @@ namespace RentalCarXamarin
             public int numberOfPassengers { get; set; }
             public double price { get; set; }
         }
+
 
         public class CarChoosedModel : BindableObject
         {
@@ -74,6 +90,8 @@ namespace RentalCarXamarin
 
             }
         }
+
+
 
         public async void paymentNowButton(object sender, EventArgs e)
         {

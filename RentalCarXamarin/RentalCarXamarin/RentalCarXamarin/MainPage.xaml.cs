@@ -45,7 +45,6 @@ namespace RentalCarXamarin
         {
             await this.Navigation.PushAsync(new AreaAdmin());
         }
-
     }
 
 }
