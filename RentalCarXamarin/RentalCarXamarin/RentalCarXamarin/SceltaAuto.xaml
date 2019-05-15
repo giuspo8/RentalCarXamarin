@@ -9,7 +9,7 @@
                     BackgroundColor="White"
                     Padding="0,0,0,0">
 
-            <ListView  x:Name="listView" ItemsSource="{Binding CarItems}" HasUnevenRows="True">
+            <ListView  x:Name="listView" ItemsSource="{Binding CarItems}" HasUnevenRows="True" ItemTapped="CarTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

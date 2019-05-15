@@ -31,6 +31,18 @@ namespace RentalCarXamarin
             public double price { get; set; }
         }
 
+        public async void CarTapped (object sender,ItemTappedEventArgs e)
+        {
+            Car item = (Car)e.Item;
+            Application.Current.Properties["image"] = item.image;
+            Application.Current.Properties["model"] = item.model;
+            Application.Current.Properties["type"] = item.type;
+            Application.Current.Properties["shift"] = item.shift;
+            Application.Current.Properties["numberOfPassengers"] = item.numberOfPassengers;
+            Application.Current.Properties["price"] = item.price;
+            await this.Navigation.PushAsync(new RiepilogoPrenotazione());
+        }
+
         public class CarChoosingModel : BindableObject
         {
             List<Car> carItems;
