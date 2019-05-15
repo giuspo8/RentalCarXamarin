@@ -22,6 +22,10 @@ namespace RentalCarXamarin
             //settiamo la data minima (domani)per i due datepicker
             DatePickerRit.SetValue(DatePicker.MinimumDateProperty, DateTime.Now.AddDays(1));
             DatePickerRic.SetValue(DatePicker.MinimumDateProperty, DateTime.Now.AddDays(1));
+            //mette valori di default alle stazioni
+            //per evitare controlli successivi
+            PickerRit.SelectedIndex = 1;
+            PickerRic.SelectedIndex = 1;
         }
 
         public void DatePickerDateSelected(object sender, DateChangedEventArgs e)
@@ -44,7 +48,12 @@ namespace RentalCarXamarin
                 await DisplayAlert("Attenzione","La data di ritiro deve essere antecedente alla data di riconsegna","OK");
             }
             else {
-                //passiamo page sceltaauto
+                //salvo tutti i valori sul dizionario properties
+                String dateRetire = DatePickerRit.Date.ToString() + " " + TimePickerRit.Time.ToString();
+                String dateRestitution = DatePickerRic.Date.ToString() + " " + TimePickerRic.Time.ToString();
+                String stationRetire = PickerRit.ToString();
+                String stationRestitution = PickerRic.ToString();
+                //passiamo alla page sceltaauto
                 await this.Navigation.PushAsync(new SceltaAuto());
             }
         }

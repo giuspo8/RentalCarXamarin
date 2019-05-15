@@ -94,7 +94,7 @@
                                 FontSize="15"
                                 TextColor="Black"
                                 Title="Seleziona stazione">
-                                <Picker.Items>
+                            <Picker.Items>
                                 <x:String>Milano Stazione</x:String>
                                 <x:String>Ancona</x:String>
                             </Picker.Items>

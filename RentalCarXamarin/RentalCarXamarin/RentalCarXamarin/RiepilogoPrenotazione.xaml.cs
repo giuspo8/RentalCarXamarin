@@ -74,5 +74,21 @@ namespace RentalCarXamarin
 
             }
         }
+
+        public async void paymentNowButton(object sender, EventArgs e)
+        {
+            Boolean paynow = true;
+            Application.Current.Properties["payment"] = paynow;
+            //va alla pagina per il pagamento
+            await this.Navigation.PushAsync(new PagaOra());
+        }
+
+        public async void paymentLaterButton(object sender, EventArgs e)
+        {
+            Boolean paynow = false;
+            Application.Current.Properties["payment"] = paynow;
+            //va alla pagina per il pagamento
+            await this.Navigation.PushAsync(new PagaOra());
+        }
     }
 }

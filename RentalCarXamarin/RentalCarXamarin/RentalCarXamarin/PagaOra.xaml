@@ -27,24 +27,28 @@
 
                 <Entry
                     VerticalOptions="Start"
+                    x:Name="name"
                     Placeholder="Nome*"
                     HorizontalOptions="FillAndExpand"
                     />
 
                 <Entry
                     VerticalOptions="Start"
+                    x:Name="surname"
                     Placeholder="Cognome*"
                     HorizontalOptions="FillAndExpand"
                     />
 
                 <Entry
                     VerticalOptions="Start"
+                    x:Name="emailEntry"
                     Placeholder="E-mail*"
                     HorizontalOptions="FillAndExpand"
                     />
 
                 <Entry
                     VerticalOptions="Start"
+                    x:Name="phone"
                     Placeholder="Telefono*"
                     HorizontalOptions="FillAndExpand"
                     />
@@ -59,12 +63,14 @@
                 <Entry
                     VerticalOptions="Start"
                     Placeholder="Data di scadenza*"
+                    x:Name="DataScadenza"
                     HorizontalOptions="FillAndExpand"
                     />
 
                 <Entry
                     VerticalOptions="Start"
                     Placeholder="Codice di sicurezza*"
+                    x:Name="CodiceSicurezza"
                     HorizontalOptions="FillAndExpand"
                     />
 
@@ -85,6 +91,7 @@
                     <Button
                     FontAttributes="Bold"
                     Text="Conferma prenotazione"
+                    Clicked="ConfirmButton"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
