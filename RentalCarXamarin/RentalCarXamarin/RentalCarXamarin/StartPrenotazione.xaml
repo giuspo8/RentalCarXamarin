@@ -48,7 +48,6 @@
                                 x:Name="DatePickerRit"
                                 HorizontalOptions="FillAndExpand"
                                 VerticalOptions="Start"
-                                MinimumDate="05/01/2019"
                                 Format="dd/MM/yyyy"
                                 FontSize="16"
                                 TextColor="Black"
@@ -134,7 +133,6 @@
                         <DatePicker
                                 x:Name="DatePickerRic"
                                 HorizontalOptions="FillAndExpand"
-                                MinimumDate="05/01/2019"
                                 Format="dd/MM/yyyy"
                                 FontSize="16"
                                 TextColor="Black"

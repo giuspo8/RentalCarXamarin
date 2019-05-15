@@ -19,17 +19,20 @@ namespace RentalCarXamarin
 
         public async void adminCarButton(object sender, EventArgs e)
         {
+            //metodo navigazione tra pagine
             await this.Navigation.PushAsync(new AdminAuto());
         }
 
         public async void adminStationsButton(object sender, EventArgs e)
         {
+            //metodo navigazione tra pagine
             await this.Navigation.PushAsync(new AdminStazioni());
         }
 
         public async void backToHomeButton(object sender, EventArgs e)
         {
-            await this.Navigation.PushAsync(new MainPage());
+            //toglie tutte le pagine dallo stack e va alla pagina iniziale
+            await this.Navigation.PopToRootAsync();
         }
     }
 }

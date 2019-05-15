@@ -19,6 +19,7 @@ namespace RentalCarXamarin
 
         public async void backButton(object sender, EventArgs e)
         {
+            //al click del bottone va ad AreaAdmin
             await this.Navigation.PushAsync(new AreaAdmin());
         }
     }

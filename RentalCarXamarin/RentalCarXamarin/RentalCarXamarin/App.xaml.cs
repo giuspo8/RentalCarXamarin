@@ -10,7 +10,7 @@ namespace RentalCarXamarin
         public App()
         {
             InitializeComponent();
-
+            //inizializziamo la pagina iniziale come una navigationPage per permettere la navigazione tra pagine
             MainPage = new NavigationPage(new MainPage());
             
         }
