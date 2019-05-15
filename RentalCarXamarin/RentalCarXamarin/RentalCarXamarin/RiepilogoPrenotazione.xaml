@@ -19,14 +19,14 @@
                     VerticalOptions="Start"
                     Orientation="Vertical"
                     BackgroundColor="#FFC210"
-                    Spacing="5"
+                    Spacing="0"
                     >
 
                     <Label
                         Text="Ritiro"
                         TextColor="Black"
                         HorizontalOptions="CenterAndExpand"
-                        Margin="0,10,0,0"
+                        Margin="0,10,0,5"
                         FontAttributes="Bold"
                         />
 
@@ -49,14 +49,14 @@
                     VerticalOptions="Start"
                     Orientation="Vertical"
                     BackgroundColor="#FFC210"
-                    Spacing="5"
+                    Spacing="0"
                     >
 
                     <Label
                         Text="Riconsegna"
                         TextColor="Black"
                         HorizontalOptions="CenterAndExpand"
-                        Margin="0,10,0,0"
+                        Margin="0,10,0,5"
                         FontAttributes="Bold"
                         />
 
@@ -74,119 +74,117 @@
 
                 </StackLayout>
 
-                    <ListView  x:Name="listView" ItemsSource="{Binding CarItems}" HasUnevenRows="True">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <StackLayout BackgroundColor="White"
+                <ListView  x:Name="listView" ItemsSource="{Binding CarItems}" HasUnevenRows="True" HeightRequest="90">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="White"
                              Orientation="Vertical"
-                             VerticalOptions="FillAndExpand"
                              Margin="0,0,0,0">
 
-                                        <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Horizontal">
 
-                                            <Image Source="{Binding image}" 
+                                        <Image Source="{Binding image}" 
                                            WidthRequest="100"
                                            HeightRequest="100"
                                            Margin="10,0,10,0"/>
 
-                                            <StackLayout
+                                        <StackLayout
                                         Orientation="Vertical"
                                         HorizontalOptions="Start"
                                         Spacing="0">
 
-                                                <Label Text="{Binding model}"
+                                            <Label Text="{Binding model}"
                                         TextColor="Black"
                                         FontAttributes="Bold"/>
 
-                                                <StackLayout
+                                            <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="Start"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                                    <Label
+                                                <Label
                                                 HorizontalOptions="Start"
                                                 Text="Tipo:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                                    <Label Text="{Binding type}"
+                                                <Label Text="{Binding type}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                                </StackLayout>
+                                            </StackLayout>
 
-                                                <StackLayout
+                                            <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="Start"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                                    <Label
+                                                <Label
                                                 HorizontalOptions="Start"
                                                 Text="Cambio:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                                    <Label Text="{Binding shift}"
+                                                <Label Text="{Binding shift}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                                </StackLayout>
+                                            </StackLayout>
 
-                                                <StackLayout
+                                            <StackLayout
                                             VerticalOptions="Start"
                                             Orientation="Horizontal"
                                             HorizontalOptions="Start"
                                             Spacing="5">
 
-                                                    <Label
+                                                <Label
                                                 Text="N. Passeggeri:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                                    <Label Text="{Binding numberOfPassengers}"
+                                                <Label Text="{Binding numberOfPassengers}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                                    <Label
+                                                <Label
                                                 Text="persone"
                                                 TextColor="Black"/>
 
-                                                </StackLayout>
+                                            </StackLayout>
 
-                                                <StackLayout
+                                            <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="Start"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                                    <Label
+                                                <Label
                                                 Text="Costo:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                                    <Label Text="{Binding price}"
+                                                <Label Text="{Binding price}"
                                                 HorizontalOptions="Start"
                                                 TextColor="black" />
 
-                                                    <Label
+                                                <Label
                                                 Text="€ al giorno"
                                                 TextColor="Black"/>
 
-                                                </StackLayout>
-
                                             </StackLayout>
+
                                         </StackLayout>
                                     </StackLayout>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
 
-                    <Button
-                    VerticalOptions="Start"
+                <Button
                     FontAttributes="Bold"
                     Text="Paga ora"
                     BackgroundColor="#FF8C00"
@@ -212,8 +210,8 @@
                     HorizontalOptions="End"
                     VerticalOptions="End"
                     />
+                    </StackLayout>
 
-            </StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

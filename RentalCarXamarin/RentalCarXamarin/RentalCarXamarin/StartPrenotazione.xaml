@@ -29,7 +29,7 @@
                 <StackLayout
                     BackgroundColor="#FFC210"
                     HorizontalOptions="FillAndExpand"
-                    VerticalOptions="StartAndExpand"
+                    VerticalOptions="Start"
                     Spacing="0"
                     Orientation="Vertical">
 
@@ -40,8 +40,8 @@
                         <Label
                         Text="Data: "
                         TextColor="Black"
-                        FontSize="16"
-                        Margin="0,15,0,0"
+                        FontSize="15"
+                        Margin="0,10,0,0"
                         />
 
                         <DatePicker
@@ -49,7 +49,7 @@
                                 HorizontalOptions="FillAndExpand"
                                 VerticalOptions="Start"
                                 Format="dd/MM/yyyy"
-                                FontSize="16"
+                            FontSize="15"
                                 TextColor="Black"
                                 />
 
@@ -61,15 +61,15 @@
 
                         <Label
                         Text="Ora: "
-                        Margin="0,15,0,0"
+                        Margin="0,10,0,0"
                         TextColor="Black"
-                        FontSize="16"
+                        FontSize="15"
                         />
 
                         <TimePicker
                                 x:Name="TimePickerRit"
                                 HorizontalOptions="FillAndExpand"
-                                FontSize="16"
+                                FontSize="15"
                                 TextColor="Black"
                                 />
 
@@ -82,18 +82,18 @@
                         <Label
                         x:Name="stazione"
                         Text="Stazione: "
-                        Margin="0,15,0,0"
+                        Margin="0,10,0,0"
                         TextColor="Black"
-                        FontSize="16"
+                        FontSize="15"
                             
                         />
 
                         <Picker
                                 x:Name="PickerRit"
                                 HorizontalOptions="FillAndExpand"
-                                FontSize="16"
+                                FontSize="15"
                                 TextColor="Black"
-                                Title="seleziona stazione">
+                                Title="Seleziona stazione">
                                 <Picker.Items>
                                 <x:String>Milano Stazione</x:String>
                                 <x:String>Ancona</x:String>
@@ -116,7 +116,7 @@
                 <StackLayout
                     BackgroundColor="#FFC210"
                     HorizontalOptions="FillAndExpand"
-                    VerticalOptions="StartAndExpand"
+                    VerticalOptions="Start"
                     Orientation="Vertical">
 
                     <StackLayout
@@ -125,16 +125,16 @@
 
                         <Label
                         Text="Data: "
-                        Margin="0,15,0,0"
+                        Margin="0,10,0,0"
                         TextColor="Black"
-                        FontSize="16"
+                        FontSize="15"
                         />
 
                         <DatePicker
                                 x:Name="DatePickerRic"
                                 HorizontalOptions="FillAndExpand"
                                 Format="dd/MM/yyyy"
-                                FontSize="16"
+                                FontSize="15"
                                 TextColor="Black"
                                 />
 
@@ -146,15 +146,15 @@
 
                         <Label
                         Text="Ora: "
-                        Margin="0,15,0,0"
+                        Margin="0,10,0,0"
                         TextColor="Black"
-                        FontSize="16"
+                        FontSize="15"
                         />
 
                         <TimePicker
                                 x:Name="TimePickerRic"
                                 HorizontalOptions="FillAndExpand"
-                                FontSize="16"
+                                FontSize="15"
                                 TextColor="Black"
                                 />
 
@@ -167,47 +167,42 @@
                         <Label
                         x:Name="stazione1"
                         Text="Stazione: "
-                        Margin="0,15,0,0"
+                        Margin="0,10,0,0"
                         TextColor="Black"
-                        FontSize="16"
+                        FontSize="15"
                         />
 
                         <Picker
                                 x:Name="PickerRic"
-                                Title="seleziona stazione"
+                                Title="Seleziona stazione"
                                 HorizontalOptions="FillAndExpand"
-                                FontSize="16"
+                                FontSize="15"
                                 TextColor="Black">
-                           
+
                             <Picker.Items>
                                 <x:String>Milano Stazione</x:String>
                                 <x:String>Ancona</x:String>
                             </Picker.Items>
                         </Picker>
 
-                                
+
 
                     </StackLayout>
 
                 </StackLayout>
 
-                <StackLayout
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="EndAndExpand"
-                    Orientation="Vertical"
-                    Spacing="0"
-                    Margin="0,20,0,20">
-                    
-                    <Button
+                <Button
                     FontAttributes="Bold"
+                    Margin="0,5,0,0"
                     Text="Cerca"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
                     Clicked="carchoosing"
+                    VerticalOptions="StartAndExpand"
                     />
 
-                    <ImageButton
+                <ImageButton
                     Source="home.png"
                     HeightRequest="50"
                     WidthRequest="50"
@@ -215,7 +210,6 @@
                     VerticalOptions="End"
                     Clicked="backToHomeButton"
                     />
-                </StackLayout>
 
             </StackLayout>
 

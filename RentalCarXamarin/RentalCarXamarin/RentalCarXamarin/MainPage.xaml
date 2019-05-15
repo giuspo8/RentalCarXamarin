@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:RentalCarXamarin"
              x:Class="RentalCarXamarin.MainPage"
-             Title="HomePage">
+             Title="Home Page">
 
     <ScrollView VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
@@ -12,14 +12,14 @@
         <StackLayout
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="FillAndExpand"
-                Spacing="20">
+                Margin="60,20,60,20"
+                Spacing="10">
 
             <Button
                     Text="Nuova prenotazione"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
-                    Margin="60,20,60,0"
                     FontSize="20"
                     FontAttributes="Bold"
                     Clicked="newReservationButton"
@@ -30,7 +30,6 @@
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
-                    Margin="60,0,60,0"
                     Clicked="manageReservationButton"
                     />
 
@@ -39,7 +38,6 @@
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
-                    Margin="60,0,60,0"
                     Clicked="contactsButton"
                     />
 
@@ -48,7 +46,6 @@
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
-                    Margin="60,0,60,0"
                     Clicked="segnalationsButton"
                     />
 
@@ -57,7 +54,6 @@
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
-                    Margin="60,0,60,0"
                     Clicked="faqButton"
                     />
 
@@ -66,7 +62,6 @@
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="FillAndExpand"
-                    Margin="60,0,60,20"
                     Clicked="adminButton"
                     />
 
