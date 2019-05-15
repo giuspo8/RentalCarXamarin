@@ -16,15 +16,6 @@
                 Margin="20,20,20,20"
                 Spacing="0">
 
-                <Label
-                 Text="Pagare in stazione"
-                 FontSize="20"
-                 TextColor="Black"
-                 VerticalOptions="Start"
-                 HorizontalOptions="CenterAndExpand"
-                    Margin="0,0,0,10"
-                 />
-
                 <Entry
                     VerticalOptions="Start"
                     x:Name="name"
@@ -51,6 +42,7 @@
                     x:Name="phone"
                     Placeholder="Telefono*"
                     HorizontalOptions="FillAndExpand"
+                    Keyboard="Numeric"
                     />
 
                 <Entry
@@ -58,6 +50,7 @@
                     x:Name="CartaCredito"
                     Placeholder="Numero carta di credito*"
                     HorizontalOptions="FillAndExpand"
+                    Keyboard="Numeric"
                     />
 
                 <Entry
@@ -65,6 +58,7 @@
                     Placeholder="Data di scadenza*"
                     x:Name="DataScadenza"
                     HorizontalOptions="FillAndExpand"
+                    Keyboard="Numeric"
                     />
 
                 <Entry
@@ -72,6 +66,7 @@
                     Placeholder="Codice di sicurezza*"
                     x:Name="CodiceSicurezza"
                     HorizontalOptions="FillAndExpand"
+                    Keyboard="Numeric"
                     />
 
                 <Label

@@ -31,13 +31,13 @@
                         />
 
                     <Label
-                        Text="Prova"
+                        Text="{Binding DataRit}"
                         Margin="10,0,10,0"
                         TextColor="Black"
                         />
 
                     <Label
-                        Text="Prova2"
+                        Text="{Binding StazRit}"
                         Margin="10,0,10,10"
                         TextColor="Black"
                         />
@@ -61,13 +61,13 @@
                         />
 
                     <Label
-                        Text="Prova"
+                        Text="{Binding DataRic}"
                         Margin="10,0,10,0"
                         TextColor="Black"
                         />
 
                     <Label
-                        Text="Prova2"
+                        Text="{Binding StazRic}"
                         Margin="10,0,10,10"
                         TextColor="Black"
                         />
@@ -87,7 +87,7 @@
                                         <Image Source="{Binding image}" 
                                            WidthRequest="100"
                                            HeightRequest="100"
-                                           Margin="10,0,10,0"/>
+                                           Margin="0,0,10,0"/>
 
                                         <StackLayout
                                         Orientation="Vertical"

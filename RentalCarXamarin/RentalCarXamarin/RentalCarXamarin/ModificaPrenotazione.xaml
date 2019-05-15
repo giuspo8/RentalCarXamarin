@@ -12,20 +12,11 @@
             <StackLayout
                 VerticalOptions="FillAndExpand"
                 HorizontalOptions="FillAndExpand"
-                Spacing="20"
-                Margin="0,20,0,0">
-
-                <Label
-                 Text="Gestisci prenotazione"
-                 FontAttributes="Bold"
-                 FontSize="20"
-                 HorizontalOptions="CenterAndExpand"
-                    TextColor="Black"
-                 />
+                Spacing="0"
+                Margin="20,20,20,0">
 
                 <Entry
                     Placeholder="Inseire e-mail"
-                    Margin="20,0,20,0"
                     HorizontalOptions="FillAndExpand"
                     />
 
@@ -33,6 +24,7 @@
                     Placeholder="Inserire ID prenotazione"
                     Margin="20,0,80,0"
                     HorizontalOptions="FillAndExpand"
+                    Keyboard="Numeric"
                     />
 
                 <StackLayout
