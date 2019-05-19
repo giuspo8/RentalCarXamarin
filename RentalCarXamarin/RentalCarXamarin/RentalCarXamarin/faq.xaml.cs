@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,20 +13,53 @@ namespace RentalCarXamarin
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class faq : ContentPage
 	{
-        List<string> lista = new List<string>();
+        
         public faq ()
 		{
 			InitializeComponent ();
-            
-            lista.Add("domanda1");
-            lista.Add("domanda2");
-            lst.ItemsSource = lista;
-        }
-        private async void itemsel(object sender, SelectedItemChangedEventArgs e)
-        {
-            var item = e.SelectedItem;
-            
+            BindingContext = new ListViewStringsViewModel();
 
         }
+        async void ListViewItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            string item = (string)e.Item;
+            if (item== "Dopo aver prenotato, è possibile cambiare la macchina ?")
+            {
+                await DisplayAlert("Risposta", "No, non è possibile.", "OK");
+            }
+            else
+            {
+                await DisplayAlert("Risposta", "Il cliente verrà contattato.dasfhdjhfjsdhfjdshfjdshfjsdhfjdshfjsdfhsdjfhsdjfksdhbfhksd", "OK");
+            }
+            
+            ((ListView)sender).SelectedItem = null;
+        }
+
+        public class ListViewStringsViewModel : BindableObject
+        {
+            List<string> items;
+            public List<string> Items
+            {
+                get
+                {
+                    return items;
+                }
+                set
+                {
+                    items = value;
+                    OnPropertyChanged("Items");
+                }
+            }
+
+            public ListViewStringsViewModel()
+            {
+                Items = new List<string>
+                    {
+                        "Dopo aver prenotato, è possibile cambiare la macchina ?",
+                        "Cosa succede se non si riconsegna la macchina in tempo ?",
+                    };
+            }
+        }
+
     }
 }

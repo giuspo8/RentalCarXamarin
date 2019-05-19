@@ -94,10 +94,6 @@
                                 FontSize="15"
                                 TextColor="Black"
                                 Title="Seleziona stazione">
-                            <Picker.Items>
-                                <x:String>Milano Stazione</x:String>
-                                <x:String>Ancona</x:String>
-                            </Picker.Items>
                         </Picker>
 
                     </StackLayout>
@@ -178,11 +174,6 @@
                                 HorizontalOptions="FillAndExpand"
                                 FontSize="15"
                                 TextColor="Black">
-
-                            <Picker.Items>
-                                <x:String>Milano Stazione</x:String>
-                                <x:String>Ancona</x:String>
-                            </Picker.Items>
                         </Picker>
 
 

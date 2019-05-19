@@ -55,6 +55,7 @@
                         Source="email.png"
                         HeightRequest="50"
                         WidthRequest="50"
+                        Clicked="gmail"
                         />
 
                     <Label
@@ -84,6 +85,7 @@
                         Source="fb1.png"
                         HeightRequest="50"
                         WidthRequest="50"
+                        Clicked="facebook"
                         />
 
                     <Label
@@ -113,6 +115,7 @@
                         Source="insta1.png"
                         HeightRequest="50"
                         WidthRequest="50"
+                        Clicked="instagram"
                         />
 
                     <Label

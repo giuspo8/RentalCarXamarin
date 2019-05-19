@@ -18,7 +18,7 @@ namespace RentalCarXamarin
         public StartPrenotazione ()
 		{
 			InitializeComponent ();
-            PickerRit.Items.Add("ciao");
+           
             //settiamo la data minima (domani)per i due datepicker
             DatePickerRit.SetValue(DatePicker.MinimumDateProperty, DateTime.Now.AddDays(1));
             DatePickerRic.SetValue(DatePicker.MinimumDateProperty, DateTime.Now.AddDays(1));
@@ -26,6 +26,14 @@ namespace RentalCarXamarin
             //per evitare controlli successivi
             PickerRit.SelectedIndex = 1;
             PickerRic.SelectedIndex = 1;
+            ReadStations();
+        }
+        public void ReadStations()
+        {
+            //lettura dati provenienti dal database
+            //inserisco i dati nel picker
+            PickerRit.Items.Add("Milano Stazione");
+            PickerRic.Items.Add("Milano Stazione");
         }
 
         public void DatePickerDateSelected(object sender, DateChangedEventArgs e)
