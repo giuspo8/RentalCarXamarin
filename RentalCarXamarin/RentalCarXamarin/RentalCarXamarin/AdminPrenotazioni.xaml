@@ -1,233 +1,184 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RentalCarXamarin.ModificaPrenotazione"
-             Title="Gestione prenotazione">
+             x:Class="RentalCarXamarin.AdminPrenotazioni"
+             Title="Gestione prenotazioni">
     <ContentPage.Content>
-
         <ScrollView VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"
                     BackgroundColor="White"
                     Padding="0,0,0,0">
-            <StackLayout
-                VerticalOptions="FillAndExpand"
-                HorizontalOptions="FillAndExpand"
-                Spacing="0"
-                Margin="20,20,20,0">
 
-                <Entry
-                    Placeholder="Inserire e-mail"
-                    HorizontalOptions="FillAndExpand"
-                    />
+            <ListView  x:Name="listView" 
+                           HasUnevenRows="True" >
 
-                <Entry
-                    Placeholder="Inserire ID prenotazione"
-                    Margin="0,0,80,0"
-                    HorizontalOptions="FillAndExpand"
-                    Keyboard="Numeric"
-                    />
-
-                <ListView  x:Name="listView" 
-                           HasUnevenRows="True" 
-                           HeightRequest="120">
-                    
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <StackLayout BackgroundColor="White"
+                <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="White"
                              Orientation="Vertical"
                              VerticalOptions="StartAndExpand"
                                              Spacing="5"
                              Margin="0,0,0,0">
 
-                                    <StackLayout
+                            <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                        <Label
+                                <Label
                                                 HorizontalOptions="Start"
                                                 Text="Utente:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                        <Label Text="lol"
+                                <Label Text="lol"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                    </StackLayout>
+                            </StackLayout>
 
-                                    <StackLayout
+                            <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                        <Label
+                                <Label
                                                 HorizontalOptions="Start"
                                                 Text="Stazione di ritiro:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                        <Label Text="Miao"
+                                <Label Text="Miao"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                        <StackLayout
+                                <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                            <Label
+                                    <Label
                                                 HorizontalOptions="Start"
                                                 Text="Data ritiro:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="DataRit"
+                                    <Label Text="DataRit"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                            <Label Text="OraRit"
+                                    <Label Text="OraRit"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                        </StackLayout>
+                                </StackLayout>
 
-                                        <StackLayout
+                                <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                            <Label
+                                    <Label
                                                 HorizontalOptions="Start"
                                                 Text="Stazione riconsegna:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="lol"
+                                    <Label Text="lol"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                        </StackLayout>
+                                </StackLayout>
 
-                                        <StackLayout
+                                <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                            <Label
+                                    <Label
                                                 HorizontalOptions="Start"
                                                 Text="Data riconsegna:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="DataRic"
+                                    <Label Text="DataRic"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                            <Label Text="OraRic"
+                                    <Label Text="OraRic"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                        </StackLayout>
+                                </StackLayout>
 
-                                        <StackLayout
+                                <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                            <Label
+                                    <Label
                                                 HorizontalOptions="Start"
                                                 Text="Macchina:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="lol"
+                                    <Label Text="lol"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                        </StackLayout>
+                                </StackLayout>
 
-                                        <StackLayout
+                                <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                            <Label
+                                    <Label
                                                 HorizontalOptions="Start"
                                                 Text="Pagamento:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="lol"
+                                    <Label Text="lol"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                        </StackLayout>
+                                </StackLayout>
 
-                                        <StackLayout
+                                <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                            <Label
+                                    <Label
                                                 HorizontalOptions="Start"
                                                 Text="Costo:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="lol"
+                                    <Label Text="lol"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                        </StackLayout>
-
-                                    </StackLayout>
-
                                 </StackLayout>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
 
-                <StackLayout
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="EndAndExpand"
-                    Orientation="Vertical"
-                    Spacing="0"
-                    Margin="0,20,0,20">
+                            </StackLayout>
 
-                    <Button
-                    FontAttributes="Bold"
-                    Text="Cerca"
-                    BackgroundColor="#FF8C00"
-                    TextColor="Black"
-                    HorizontalOptions="CenterAndExpand"
-                    />
-
-
-                    <ImageButton
-                    Source="home.png"
-                    HeightRequest="50"
-                    WidthRequest="50"
-                    HorizontalOptions="End"
-                    VerticalOptions="End"
-                    Margin="0,0,20,0"
-                    Clicked="backToHomeButton"
-                    />
-
-                </StackLayout>
-
-            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            </ListView>
+        
         </ScrollView>
-
     </ContentPage.Content>
 </ContentPage>
