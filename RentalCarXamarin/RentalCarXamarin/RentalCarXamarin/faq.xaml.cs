@@ -29,7 +29,7 @@ namespace RentalCarXamarin
             }
             else
             {
-                await DisplayAlert("Risposta", "Il cliente verrà contattato.dasfhdjhfjsdhfjdshfjdshfjsdhfjdshfjsdfhsdjfhsdjfksdhbfhksd", "OK");
+                await DisplayAlert("Risposta", "Il cliente verrà contattato.", "OK");
             }
             
             ((ListView)sender).SelectedItem = null;
