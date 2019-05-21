@@ -4,13 +4,11 @@
              x:Class="RentalCarXamarin.AdminPrenotazioni"
              Title="Gestione prenotazioni">
     <ContentPage.Content>
-        <ScrollView VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    BackgroundColor="White"
-                    Padding="0,0,0,0">
 
-            <ListView  x:Name="listView" 
-                           HasUnevenRows="True" >
+        <ListView  x:Name="listView" 
+                           HasUnevenRows="True"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
 
                 <ListView.ItemTemplate>
                 <DataTemplate>
@@ -179,6 +177,5 @@
             </ListView.ItemTemplate>
             </ListView>
         
-        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
