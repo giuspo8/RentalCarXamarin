@@ -4,13 +4,13 @@ using System.Text;
 
 namespace RentalCarXamarin
 {
-    public class Stazione
+    public class Stazioni
     {
-        public String stationName { get; set; }
+        public String Stazione { get; set; }
 
-        public Stazione(String stationName)
+        public Stazioni(String NomeStazione)
         {
-            this.stationName = stationName;
+            this.Stazione = Stazione;
         }
     }
 }

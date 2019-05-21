@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Newtonsoft.Json;
 using Xamarin.Forms.Xaml;
 
 namespace RentalCarXamarin
@@ -26,20 +27,9 @@ namespace RentalCarXamarin
             //per evitare controlli successivi
             PickerRit.SelectedIndex = 0;
             PickerRic.SelectedIndex = 0;
-            ReadStations();
+            getStations(new ServerRequest("http://rentalcar.altervista.org/leggi_stazioni.php"));
         }
-        public void ReadStations()
-        {
-            //lettura dati provenienti dal database
-            //inserisco i dati nel picker
-            PickerRit.Items.Add("Milano Stazione");
-            PickerRic.Items.Add("Milano Stazione");
 
-            //mette valori di default alle stazioni
-            //per evitare controlli successivi
-            PickerRit.SelectedIndex = 0;
-            PickerRic.SelectedIndex = 0;
-        }
 
         public void DatePickerDateSelected(object sender, DateChangedEventArgs e)
         {
@@ -84,6 +74,30 @@ namespace RentalCarXamarin
             await this.Navigation.PopToRootAsync();
             
         }
-       
-    }
+
+        public async void getStations(ServerRequest sr)
+        {
+            var response = await sr._client.GetAsync(sr.URL);
+            if (response.IsSuccessStatusCode)
+            {
+                var result = response.Content.ReadAsStringAsync().Result;
+                Dictionary<string, Stazioni> result_stazioni = JsonConvert.DeserializeObject<Dictionary<string, Stazioni>>(result);
+
+
+                foreach (KeyValuePair<string, Stazioni> entry in result_stazioni)
+                {
+                    //Stazione s = new Stazione(entry.Value.stationName);
+                    PickerRit.Items.Add(entry.Value.Stazione);
+                    PickerRic.Items.Add(entry.Value.Stazione);
+                }
+                //mette valori di default alle stazioni
+                //per evitare controlli successivi
+                PickerRit.SelectedIndex = 0;
+                PickerRic.SelectedIndex = 0;
+            }
+            else
+                await DisplayAlert("Attenzione", "Nothing retrieved from the server", "OK");
+        }
+
+        }
 }

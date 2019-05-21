@@ -7,8 +7,8 @@ namespace RentalCarXamarin
     public class Reservation
     {
         private int id;
-        private Stazione retStation;
-        private Stazione recStation;
+        private Stazioni retStation;
+        private Stazioni recStation;
         private CarItem car;
         private String email;
         private String dateRetire;
@@ -16,7 +16,7 @@ namespace RentalCarXamarin
         private int payment;
         private double price;
 
-        public Reservation(int id, Stazione retStation, Stazione recStation, CarItem car, String email, String dateRetire, String dateRestitution, int payment, double price)
+        public Reservation(int id, Stazioni retStation, Stazioni recStation, CarItem car, String email, String dateRetire, String dateRestitution, int payment, double price)
         {
             this.id = id;
             this.retStation = retStation;

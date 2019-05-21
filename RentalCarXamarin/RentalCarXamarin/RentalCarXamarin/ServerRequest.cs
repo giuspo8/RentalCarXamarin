@@ -1,31 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 using System.Net.Http;
-using System.Text;
 
 namespace RentalCarXamarin
 {
-    class ServerRequest
+    public class ServerRequest
     {
-        private string URL;
-        private HttpClient _client;
-        private MainPage mainPage;
+        public string URL;
+        public HttpClient _client;
+        //public MainPage mainPage;
 
-        public ServerRequest(MainPage mainPage, string URL)
+        public ServerRequest(string URL)
         {
-            this.mainPage = mainPage;
+            //this.mainPage = mainPage;
             this.URL = URL;
             this._client = new HttpClient();
         }
-
+        /*
         public async void getStazioni()
         {
             var response = await _client.GetAsync(URL);
             if (response.IsSuccessStatusCode)
             {
                 var result = response.Content.ReadAsStringAsync().Result;
-                Dictionary<string, Stazione> result_utenti = JsonConvert.DeserializeObject<Dictionary<string, Stazione>>(result);
-            }/*
+                Dictionary<string, Stazione> result_stazioni = JsonConvert.DeserializeObject<Dictionary<string, Stazione>>(result);
+
+
+                foreach (KeyValuePair<string, Stazione> entry in result_stazioni)
+                {
+                    Stazione s = new Stazione(entry.Value.stationName);
+                    PickerRit.Items.Add(entry.Value.stationName);
+                }
+            }
+            
                 List<Stazione> stazioni = new List<Utente>();
                 
                 foreach (KeyValuePair<string, Utente> entry in result_utenti)
@@ -54,8 +61,8 @@ namespace RentalCarXamarin
                 Debug.WriteLine("Error while inserting User in Post mode");
             }
             */
-        }
-           
+    }
 
-            }
-        }
+
+}
+     
