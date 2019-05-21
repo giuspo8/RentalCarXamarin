@@ -15,7 +15,6 @@ namespace RentalCarXamarin
         public ConfermaEmail()
         {
             InitializeComponent();
-
         }
 
         public async void backToHomeButton(object sender, EventArgs e)
