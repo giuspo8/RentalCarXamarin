@@ -40,6 +40,7 @@
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="150"
                     VerticalOptions="Start"
+                    Clicked="adminReservationsButton"
                     />
 
                 <Button

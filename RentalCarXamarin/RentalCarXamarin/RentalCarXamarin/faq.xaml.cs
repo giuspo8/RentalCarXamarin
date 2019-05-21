@@ -20,6 +20,13 @@ namespace RentalCarXamarin
             BindingContext = new ListViewStringsViewModel();
 
         }
+
+        public async void backToHomeButton(object sender, EventArgs e)
+        {
+            //toglie tutte le pagine dallo stack e va alla pagina iniziale
+            await this.Navigation.PopToRootAsync();
+        }
+
         async void ListViewItemTapped(object sender, ItemTappedEventArgs e)
         {
             string item = (string)e.Item;
