@@ -24,8 +24,8 @@ namespace RentalCarXamarin
             DatePickerRic.SetValue(DatePicker.MinimumDateProperty, DateTime.Now.AddDays(1));
             //mette valori di default alle stazioni
             //per evitare controlli successivi
-            PickerRit.SelectedIndex = 1;
-            PickerRic.SelectedIndex = 1;
+            PickerRit.SelectedIndex = 0;
+            PickerRic.SelectedIndex = 0;
             ReadStations();
         }
         public void ReadStations()
@@ -34,6 +34,11 @@ namespace RentalCarXamarin
             //inserisco i dati nel picker
             PickerRit.Items.Add("Milano Stazione");
             PickerRic.Items.Add("Milano Stazione");
+
+            //mette valori di default alle stazioni
+            //per evitare controlli successivi
+            PickerRit.SelectedIndex = 0;
+            PickerRic.SelectedIndex = 0;
         }
 
         public void DatePickerDateSelected(object sender, DateChangedEventArgs e)
