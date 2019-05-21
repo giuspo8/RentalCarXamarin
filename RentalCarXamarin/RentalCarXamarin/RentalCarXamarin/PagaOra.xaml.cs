@@ -76,6 +76,8 @@ namespace RentalCarXamarin
                 }
                 set_reservations(new Reservation(sRit,sRest,car,email,dateRetire,dateRestitution,paynow,price),
                     new ServerRequest("http://rentalcar.altervista.org/inserisci_prenotazione.php"));
+                set_users(new User(email, fName, sName, telephone),
+                    new ServerRequest("http://rentalcar.altervista.org/inserisci_utenti.php"));
                 //va alla pagina finale
                 await this.Navigation.PushAsync(new ConfermaEmail());
             }
@@ -97,6 +99,24 @@ namespace RentalCarXamarin
                 //Debug.WriteLine("Error while inserting User in Post mode");
             }
         }
+
+        public async void set_users(User ur, ServerRequest sr)
+        {
+            string URL_Param = "?Nome=" + ur.Nome + "&Cognome=" + ur.Cognome
+                + "&Telefono=" + ur.Telefono + "&Email="+ur.Email;
+            var response = await sr._client.PostAsync(sr.URL + URL_Param, null);
+            if (response.IsSuccessStatusCode)
+            {
+                string responseText = response.Content.ReadAsStringAsync().Result.ToString();
+                Insert_Result(responseText);
+            }
+            else
+            {
+                //Debug.WriteLine("Error while inserting User in Post mode");
+            }
+        }
+
+
 
         public void Insert_Result(string ans)
         {
