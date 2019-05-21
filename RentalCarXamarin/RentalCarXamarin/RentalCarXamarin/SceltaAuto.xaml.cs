@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Newtonsoft.Json;
 using Xamarin.Forms.Xaml;
 
 namespace RentalCarXamarin
@@ -12,11 +13,11 @@ namespace RentalCarXamarin
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SceltaAuto : ContentPage
     {
-
         public SceltaAuto()
         {
             InitializeComponent();
             BindingContext = new CarChoosingModel();
+           
 
         }
 
@@ -71,13 +72,17 @@ namespace RentalCarXamarin
                 }
             }
 
+            public List<Car> CarList { get; } = new List<Car>();
+
             //è il costruttore di CarChoosingModel
             public CarChoosingModel()
             {
-                
-                //associamo alla lista i valori che dovremo ottenere dal server
 
-                CarItems = new List<Car> {
+                //associamo alla lista i valori che dovremo ottenere dal server
+                getCar(new ServerRequest("http://rentalcar.altervista.org/leggi_auto.php"));
+
+                CarItems = new List<Car>{
+
 
                 new Car {image = "cinquecento.png", model = "Fiat Cinquecento", type="Economy", shift="manuale",numberOfPassengers=5,price=100.00},
 
@@ -86,9 +91,32 @@ namespace RentalCarXamarin
                 new Car {image = "golf.png", model = "Volswagen Golf", type="Luxury", shift="automatico",numberOfPassengers=5,price=100.00}
 
             };
-
+                
 
             }
+
+            public async void getCar(ServerRequest sr)
+            {
+                var response = await sr._client.GetAsync(sr.URL);
+                if (response.IsSuccessStatusCode)
+                {
+                    var result = response.Content.ReadAsStringAsync().Result;
+                    Dictionary<string, CarItem> result_car = JsonConvert.DeserializeObject<Dictionary<string, CarItem>>(result);
+                   
+
+                    foreach (KeyValuePair<string, CarItem> entry in result_car)
+                    {
+                        
+                        CarItems.Add(new Car { image = "golf.png", model=entry.Value.Model, type = entry.Value.ClassCar, shift = entry.Value.Shift,
+                            numberOfPassengers = 10, price = 100.00
+                        });
+                    }
+                }
+                else { }
+                    //await DisplayAlert("Attenzione", "Nothing retrieved from the server", "OK");
+            }
         }
+
+
     }
 }

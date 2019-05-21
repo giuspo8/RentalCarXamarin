@@ -8,7 +8,7 @@ namespace RentalCarXamarin
     {
         public String Stazione { get; set; }
 
-        public Stazioni(String NomeStazione)
+        public Stazioni(String Stazione)
         {
             this.Stazione = Stazione;
         }

@@ -6,26 +6,21 @@ namespace RentalCarXamarin
 {
     public class CarItem
     {
-        int resIdImage { get; set; }//id dell'immagine della macchina
-        String carName { get; set; }//nome dell'auto
-        String classCar { get; set; }//classe dell'auto
-        double priceGg { get; set; }//prezzo giornaliero
-        String carShift { get; set; }//cambio
-        int numberOfPassengers { get; set; }//numero di posti
+        //int resIdImage { get; set; }//id dell'immagine della macchina
+        public String Model { get; set; }//nome dell'auto
+        public String ClassCar { get; set; }//classe dell'auto
+        public double Pricegg { get; set; }//prezzo giornaliero
+        public String Shift { get; set; }//cambio
+        public int Number { get; set; }//numero di posti
 
-        public CarItem(String carName)
+        public CarItem( String Model, String ClassCar, double Pricegg, String Shift, int Number)
         {
-            this.carName = carName;
-        }
-
-        public CarItem(int resIdImage, String carName, String classCar, double priceGg, String carShift, int numberOfPassengers)
-        {
-            this.resIdImage = resIdImage;
-            this.carName = carName;
-            this.classCar = classCar;
-            this.priceGg = priceGg;
-            this.carShift = carShift;
-            this.numberOfPassengers = numberOfPassengers;
+            //this.resIdImage = resIdImage;
+            this.Model = Model;
+            this.ClassCar = ClassCar;
+            this.Pricegg = Pricegg;
+            this.Shift = Shift;
+            this.Number = Number;
         }
     }
 }

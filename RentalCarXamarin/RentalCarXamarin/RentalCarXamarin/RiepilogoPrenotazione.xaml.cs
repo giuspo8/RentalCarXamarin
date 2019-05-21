@@ -30,7 +30,9 @@ namespace RentalCarXamarin
             Double totalPrice = (price*days)+price;
             Double totalPriceStation = totalPrice+25;
             paynow.Text = "paga ora (" + totalPrice + "€)";
+            Application.Current.Properties["totalPrice"]=totalPrice;
             paystation.Text = "paga alla stazione (" + totalPriceStation + "€)";
+            Application.Current.Properties["totalPriceStation"] = totalPriceStation;
         }
         
 
