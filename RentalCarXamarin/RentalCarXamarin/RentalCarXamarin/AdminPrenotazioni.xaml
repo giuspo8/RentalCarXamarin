@@ -6,7 +6,8 @@
     <ContentPage.Content>
 
         <ListView  x:Name="listView" 
-                           HasUnevenRows="True"
+                   HasUnevenRows="True"
+                   ItemTapped="TappedReservation"
                    HorizontalOptions="FillAndExpand"
                    VerticalOptions="FillAndExpand">
 
@@ -31,7 +32,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                <Label Text="lol"
+                                <Label Text="{Binding Email}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -49,7 +50,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                <Label Text="Miao"
+                                <Label Text="{Binding StazioneRit}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -65,7 +66,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="DataRit"
+                                    <Label Text="{Binding DataRitiro}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -87,7 +88,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="lol"
+                                    <Label Text="{Binding StazioneRic}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -105,7 +106,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="DataRic"
+                                    <Label Text="{Binding DataRiconsegna}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -127,7 +128,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="lol"
+                                    <Label Text="{Binding Macchina}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -145,7 +146,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="lol"
+                                    <Label Text="{Binding Pagamento}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -163,7 +164,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="lol"
+                                    <Label Text="{Binding Prezzo}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
