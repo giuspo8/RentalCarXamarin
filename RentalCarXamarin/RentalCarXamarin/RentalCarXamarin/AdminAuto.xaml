@@ -18,6 +18,7 @@
 
                 <Entry
                     Placeholder="Modello"
+                    x:Name="modelloEntry"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,0,0"
                     TextColor="Black"
@@ -25,6 +26,7 @@
 
                 <Entry
                     Placeholder="Classe auto"
+                    x:Name="classeEntry"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,0,0"
                     TextColor="Black"
@@ -32,6 +34,7 @@
 
                 <Entry
                     Placeholder="Cambio"
+                    x:Name="cambioEntry"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,0,0"
                     TextColor="Black"
@@ -39,6 +42,7 @@
 
                 <Entry
                     Placeholder="Numero di passeggeri"
+                    x:Name="numeroEntry"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,0,0"
                     TextColor="Black"
@@ -46,6 +50,7 @@
 
                 <Entry
                     Placeholder="Prezzo giornaliero"
+                    x:Name="prezzoEntry"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,0,20"
                     TextColor="Black"
@@ -54,6 +59,7 @@
                 <Button
                     FontAttributes="Bold"
                     Text="Aggiungi"
+                    Clicked="insertCarButton"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
@@ -63,7 +69,8 @@
 
                 <Button
                     FontAttributes="Bold"
-                    Text="Elimina"
+                    Text="Rimuovi"
+                    Clicked="deleteCarButton"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
