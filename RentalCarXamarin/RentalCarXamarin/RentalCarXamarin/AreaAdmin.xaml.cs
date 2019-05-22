@@ -18,13 +18,13 @@ namespace RentalCarXamarin
 			InitializeComponent ();
 		}
 
-        public async void adminReservationsButton(object sender, EventArgs e)
+        public void adminReservationsButton(object sender, EventArgs e)
         {
             check_admin(new ServerRequest("http://rentalcar.altervista.org/leggiAdmin.php"),0);
 
         }
 
-        public async void adminCarButton(object sender, EventArgs e)
+        public  void adminCarButton(object sender, EventArgs e)
         {
             check_admin(new ServerRequest("http://rentalcar.altervista.org/leggiAdmin.php"),1);
       

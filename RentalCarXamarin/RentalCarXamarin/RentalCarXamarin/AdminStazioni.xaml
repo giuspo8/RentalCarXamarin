@@ -18,6 +18,7 @@
 
                 <Entry
                     Placeholder="Inserire stazione"
+                    x:Name="stationEntry"
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,0,40"
                     />
@@ -25,6 +26,7 @@
                 <Button
                     FontAttributes="Bold"
                     Text="Aggiungi"
+                    Clicked="aggiungiStazioneButton"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
@@ -34,6 +36,7 @@
                 <Button
                     FontAttributes="Bold"
                     Text="Elimina"
+                    Clicked="rimuoviStazioneButton"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
