@@ -21,5 +21,43 @@ namespace RentalCarXamarin
         {
             await this.Navigation.PopToRootAsync();
         }
+        public void sendProblemButton(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(editor.Text))
+            {
+                DisplayAlert("Attenzione", "Per favore inserisci il tuo problema", "OK");
+            }
+            else {
+                send_problem(new ServerRequest("http://rentalcar.altervista.org/inserisci_problemi.php"));
+            }
+            
+        }
+
+        public async void send_problem (ServerRequest sr)
+        {
+            string URL_Param = "?Problema=" + editor.Text;
+            var response = await sr._client.GetAsync(sr.URL + URL_Param);
+            if (response.IsSuccessStatusCode)
+            {
+                string responseText = response.Content.ReadAsStringAsync().Result.ToString();
+                Insert_Result(responseText);
+            }
+            else
+            {
+                //Debug.WriteLine("Error while inserting User in Post mode");
+            }
+        }
+
+        public void Insert_Result(string ans)
+        {
+            if (ans == "1")
+            {
+                DisplayAlert("Risultato inserimento", "La segnalazione è stata inviata", "OK");
+            }
+            else
+            {
+                DisplayAlert("Risultato inserimento", "Inserimento errato. Check your query", "OK");
+            }
+        }
     }
 }

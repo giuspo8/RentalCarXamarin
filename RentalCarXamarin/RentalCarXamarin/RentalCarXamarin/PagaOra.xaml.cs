@@ -91,7 +91,7 @@ namespace RentalCarXamarin
                 
                 message1 = "Caro " + fName + " " + sName;
                 message2 = "La ringraziamo per averci scelto,";
-                message3 = "ecco il riepilogo della sua prenotazione:";
+                message3 = "ecco il riepilogo della Sua prenotazione:";
                 message5 = "Ritiro: " + sRit.Stazione + " " + dateRetire;
                 message6 = "Restituzione: " + sRest.Stazione + " " + dateRestitution;
                 message7 = car + "   " + price + " euro";

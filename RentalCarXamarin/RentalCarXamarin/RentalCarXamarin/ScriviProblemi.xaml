@@ -24,6 +24,7 @@
                     />
 
                 <Editor
+                    x:Name="editor"
                     Placeholder="Scrivi problema"
                     HorizontalOptions="FillAndExpand"
                     Margin="20,0,20,0"
@@ -44,6 +45,7 @@
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
+                    Clicked="sendProblemButton"
                     />
 
                     <ImageButton
