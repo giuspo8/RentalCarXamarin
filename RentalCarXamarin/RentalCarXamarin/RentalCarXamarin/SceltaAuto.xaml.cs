@@ -43,7 +43,7 @@ namespace RentalCarXamarin
                 {
                     var result = response.Content.ReadAsStringAsync().Result;
                     Dictionary<string, CarItem> result_car = JsonConvert.DeserializeObject<Dictionary<string, CarItem>>(result);
-                   List<CarItem> cars = new List<CarItem>();
+                    List<CarItem> cars = new List<CarItem>();
 
                 foreach (KeyValuePair<string, CarItem> entry in result_car)
                     {

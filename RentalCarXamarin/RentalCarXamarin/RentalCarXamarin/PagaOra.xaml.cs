@@ -74,8 +74,8 @@ namespace RentalCarXamarin
                 Application.Current.Properties["email"] = email;
                 Application.Current.Properties["phone"] = telephone;
                 //carica tutto sul server
-                Stazioni sRit = new Stazioni((String)Application.Current.Properties["stationRetire"]);
-                Stazioni sRest = new Stazioni((String)Application.Current.Properties["stationRestitution"]);
+                String sRit = (String)Application.Current.Properties["stationRetire"];
+                String sRest =(String)Application.Current.Properties["stationRestitution"];
                 String car =(String)Application.Current.Properties["model"];
                 String dateRetire = (String)Application.Current.Properties["dateRetire"];
                 String dateRestitution = (String)Application.Current.Properties["dateRestitution"];
@@ -92,8 +92,8 @@ namespace RentalCarXamarin
                 message1 = "Caro " + fName + " " + sName;
                 message2 = "La ringraziamo per averci scelto,";
                 message3 = "ecco il riepilogo della Sua prenotazione:";
-                message5 = "Ritiro: " + sRit.Stazione + " " + dateRetire;
-                message6 = "Restituzione: " + sRest.Stazione + " " + dateRestitution;
+                message5 = "Ritiro: " + sRit + " " + dateRetire;
+                message6 = "Restituzione: " + sRest + " " + dateRestitution;
                 message7 = car + "   " + price + " euro";
                 message8 = "Le auguriamo buon viaggio";
                 
@@ -104,9 +104,9 @@ namespace RentalCarXamarin
 
         public async void set_reservations(Reservation rs,ServerRequest sr)
         {
-            string URL_Param = "?StazioneRit=" + rs.retStation.Stazione + "&StazioneRic=" + rs.recStation.Stazione
-                + "&Macchina="+rs.car+ "&Email="+rs.email+ "&Pagamento="+rs.payment+
-                "&DataRitiro="+rs.dateRetire+ "&DataRestituzione="+rs.dateRestitution+ "&Prezzo="+rs.price;
+            string URL_Param = "?StazioneRit=" + rs.StazioneRit+ "&StazioneRic=" + rs.StazioneRic
+                + "&Macchina="+rs.Macchina+ "&Email="+rs.Email+ "&Pagamento="+rs.Pagamento+
+                "&DataRitiro="+rs.DataRitiro+ "&DataRestituzione="+rs.DataRestituzione+ "&Prezzo="+rs.Prezzo;
             var response = await sr._client.PostAsync(sr.URL + URL_Param, null);
             if (response.IsSuccessStatusCode)
             {

@@ -16,11 +16,14 @@
                 Margin="20,20,20,0">
 
                 <Entry
+                    x:Name="emailEntry"
                     Placeholder="Inserire e-mail"
                     HorizontalOptions="FillAndExpand"
+                    Keyboard="Email"
                     />
 
                 <Entry
+                    x:Name="idEntry"
                     Placeholder="Inserire ID prenotazione"
                     Margin="0,0,80,0"
                     HorizontalOptions="FillAndExpand"
@@ -28,6 +31,7 @@
                     />
 
                 <ListView  x:Name="listView" 
+                           ItemTapped="ReservationTapped"
                            HasUnevenRows="True" 
                            HeightRequest="120">
                     
@@ -52,10 +56,12 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                        <Label Text="lol"
+                                        <Label Text="{Binding Email}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
-
+                                        <Label Text="{Binding ID}"
+                                            HorizontalOptions="Start"
+                                            TextColor="black" />
                                     </StackLayout>
 
                                     <StackLayout
@@ -70,7 +76,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                        <Label Text="Miao"
+                                        <Label Text="{Binding StazioneRit}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -86,7 +92,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="DataRit"
+                                            <Label Text="{Binding DataRitiro}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -108,7 +114,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="lol"
+                                            <Label Text="{Binding StazioneRic}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -126,7 +132,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="DataRic"
+                                            <Label Text="{Binding DataRestituzione}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -148,7 +154,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="lol"
+                                            <Label Text="{Binding Macchina}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -166,7 +172,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="lol"
+                                            <Label Text="{Binding Pagamento}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -184,7 +190,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                            <Label Text="lol"
+                                            <Label Text="{Binding Prezzo}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -211,6 +217,7 @@
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
+                    Clicked="searchButton"
                     />
 
 
