@@ -83,15 +83,22 @@ namespace RentalCarXamarin
                 double price=(double)Application.Current.Properties["totalPrice"];
                 //se non pago ora c'è un supplemento di 25 euro
                 if (!payment) price += 25;
- 
+
                 //aggiungo la prenotazione e l'utente sul server
-                set_reservations(new Reservation(sRit,sRest,car,email,dateRetire,dateRestitution,paynow,price),
+                try
+                { 
+                set_reservations(new Reservation(sRit, sRest, car, email, dateRetire, dateRestitution, paynow, price),
                     new ServerRequest("http://rentalcar.altervista.org/inserisci_prenotazione.php"));
-                set_users(new User(email, fName, sName, telephone),
-                    new ServerRequest("http://rentalcar.altervista.org/inserisci_utenti.php"));
-                //vado a leggermi l'id della prenotazione appena inserita
-                read_id(new ServerRequest("http://rentalcar.altervista.org/leggi_id.php"),
-                    email,dateRetire,dateRestitution);
+                    set_users(new User(email, fName, sName, telephone),
+                        new ServerRequest("http://rentalcar.altervista.org/inserisci_utenti.php"));
+                    //vado a leggermi l'id della prenotazione appena inserita
+                    read_id(new ServerRequest("http://rentalcar.altervista.org/leggi_id.php"),
+                        email, dateRetire, dateRestitution);
+                }
+                catch(JsonSerializationException er)
+                {
+                    await DisplayAlert("Attenzione", "Per favore riprovare", "OK");
+                }
                 
                 //compongo il messaggio da mandare in email
                 message1 = "Caro " + fName + " " + sName;

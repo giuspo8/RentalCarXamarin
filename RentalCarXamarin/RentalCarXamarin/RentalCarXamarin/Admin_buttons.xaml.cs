@@ -15,7 +15,7 @@ namespace RentalCarXamarin
 		public Admin_buttons ()
 		{
 			InitializeComponent ();
-		}
+}
 
         public async void adminReservationsButton(object sender, EventArgs e)
         {

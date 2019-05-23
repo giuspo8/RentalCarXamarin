@@ -18,32 +18,33 @@ namespace RentalCarXamarin
         //la navigazione su un'altra pagina
         public async void newReservationButton(object sender,EventArgs e)
         {
-            await this.Navigation.PushAsync(new StartPrenotazione());
+            //il true sta ad indicare che vogliamo l'animazione nel passaggio da una page all'altre
+            await this.Navigation.PushAsync(new StartPrenotazione(),true);
         }
 
         public async void manageReservationButton(object sender, EventArgs e)
         {
-            await this.Navigation.PushAsync(new ModificaPrenotazione());
+            await this.Navigation.PushAsync(new ModificaPrenotazione(), true);
         }
 
         public async void contactsButton(object sender, EventArgs e)
         {
-            await this.Navigation.PushAsync(new Contatti());
+            await this.Navigation.PushAsync(new Contatti(), true);
         }
 
         public async void segnalationsButton(object sender, EventArgs e)
         {
-            await this.Navigation.PushAsync(new ScriviProblemi());
+            await this.Navigation.PushAsync(new ScriviProblemi(), true);
         }
 
         public async void faqButton(object sender, EventArgs e)
         {
-            await this.Navigation.PushAsync(new faq());
+            await this.Navigation.PushAsync(new faq(), true);
         }
 
         public async void adminButton(object sender, EventArgs e)
         {
-            await this.Navigation.PushAsync(new AdminLogIn());
+            await this.Navigation.PushAsync(new AdminLogIn(), true);
         }
     }
 
