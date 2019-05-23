@@ -14,8 +14,11 @@ namespace RentalCarXamarin
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class PagaOra : ContentPage
 	{
+        //ci riprendiamo da dizionario properties la variabile che ci dice se paghiamo ora o alla stazione
         Boolean payment = (Boolean)Application.Current.Properties["payment"];
+        //di default supponiamo paghi ora
         int paynow = 1;
+        //stringhe che ci serveranno per l'email
         String message1;
         String message2;
         String message3;
@@ -63,8 +66,8 @@ namespace RentalCarXamarin
             else
             {
             
-                //mi prendo tutti i valori e teoricamente dovrei salvarli sul server
-                //per ora li salvo in properties
+                //mi prendo tutti i valori 
+                //li salvo in properties
                 String fName = name.Text;
                 String sName = surname.Text;
                 String email = emailEntry.Text;
@@ -73,22 +76,26 @@ namespace RentalCarXamarin
                 Application.Current.Properties["surname"] = sName;
                 Application.Current.Properties["email"] = email;
                 Application.Current.Properties["phone"] = telephone;
-                //carica tutto sul server
+                //riprendo un po di valori dal dizionario properties
                 String sRit = (String)Application.Current.Properties["stationRetire"];
                 String sRest =(String)Application.Current.Properties["stationRestitution"];
                 String car =(String)Application.Current.Properties["model"];
                 String dateRetire = (String)Application.Current.Properties["dateRetire"];
                 String dateRestitution = (String)Application.Current.Properties["dateRestitution"];
                 double price=(double)Application.Current.Properties["totalPrice"];
+                //se non pago ora c'è un supplemento di 25 euro
                 if (!payment) price += 25;
  
+                //aggiungo la prenotazione e l'utente sul server
                 set_reservations(new Reservation(sRit,sRest,car,email,dateRetire,dateRestitution,paynow,price),
                     new ServerRequest("http://rentalcar.altervista.org/inserisci_prenotazione.php"));
                 set_users(new User(email, fName, sName, telephone),
                     new ServerRequest("http://rentalcar.altervista.org/inserisci_utenti.php"));
+                //vado a leggermi l'id della prenotazione appena inserita
                 read_id(new ServerRequest("http://rentalcar.altervista.org/leggi_id.php"),
                     email,dateRetire,dateRestitution);
                 
+                //compongo il messaggio da mandare in email
                 message1 = "Caro " + fName + " " + sName;
                 message2 = "La ringraziamo per averci scelto,";
                 message3 = "ecco il riepilogo della Sua prenotazione:";
@@ -111,7 +118,7 @@ namespace RentalCarXamarin
             if (response.IsSuccessStatusCode)
             {
                 string responseText = response.Content.ReadAsStringAsync().Result.ToString();
-                Insert_Result(responseText);
+                //Insert_Result(responseText);
             }
             else
             {
@@ -127,7 +134,7 @@ namespace RentalCarXamarin
             if (response.IsSuccessStatusCode)
             {
                 string responseText = response.Content.ReadAsStringAsync().Result.ToString();
-                Insert_Result(responseText);
+                //Insert_Result(responseText);
             }
             else
             {
@@ -147,10 +154,10 @@ namespace RentalCarXamarin
 
                 foreach (KeyValuePair<string, UserId> entry in result_id)
                 {
-                    Debug.WriteLine("Key: {0}, Value: {1}", entry.Key, entry.Value.ID);
+                    //ci interessa solo l'id
                     id = entry.Value.ID;
                 }
-                Debug.WriteLine("Id: {0}", id);
+                //lo inviamo al metodo per mandare la mail
                 message4 = " Id Prenotazione: " + id;
                 send_mail(new ServerRequest("http://rentalcar.altervista.org/invio_email.php"),message4);
             }
@@ -169,7 +176,7 @@ namespace RentalCarXamarin
             if (response.IsSuccessStatusCode)
             {
                 string responseText = response.Content.ReadAsStringAsync().Result.ToString();
-                Insert_Result(responseText);
+                //Insert_Result(responseText);
             }
             else
             {
@@ -177,6 +184,7 @@ namespace RentalCarXamarin
             }
         }
 
+        //metodo per controllo
         public void Insert_Result(string ans)
         {
             if (ans == "1")

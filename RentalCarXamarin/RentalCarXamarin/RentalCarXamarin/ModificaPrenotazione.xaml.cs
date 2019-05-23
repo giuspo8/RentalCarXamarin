@@ -31,6 +31,7 @@ namespace RentalCarXamarin
                 await DisplayAlert("Attenzione", "Per favore riempire tutti i campi", "OK");
             }
             else {
+                //trasforma l'id letto come stringa dall'entry in un int
                 int id = Int32.Parse(idEntry.Text);
                 String email = emailEntry.Text;
                 search_reservation(new ServerRequest("http://rentalcar.altervista.org/cerca_prenotazione.php"), email, id);
@@ -40,7 +41,9 @@ namespace RentalCarXamarin
         public async void ReservationTapped(object sender, ItemTappedEventArgs e)
         {
             Reservation item = (Reservation)e.Item;
+            //chiama un alert e si salva la sua risposta in un bool
             bool answer=await DisplayAlert("Attenzione", "Vuoi cancellare la prenotazione?", "Si", "No");
+            //se la risposta è si cancella la prenotazione
             if (answer)
             {
                 delete_reservation(new ServerRequest("http://rentalcar.altervista.org/elimina_prenotazioni.php"),

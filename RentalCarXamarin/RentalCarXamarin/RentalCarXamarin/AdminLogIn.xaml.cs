@@ -36,6 +36,7 @@ namespace RentalCarXamarin
             if (response.IsSuccessStatusCode)
             {
                 string responseText = response.Content.ReadAsStringAsync().Result.ToString();
+                //se la query ci da in risposta l'insieme vuoto
                 if (responseText.Equals("[]"))
                 {
                     await DisplayAlert("Attenzione", "L'email o la password inserite sono errate", "OK");

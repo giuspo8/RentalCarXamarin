@@ -22,6 +22,7 @@
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,0,0"
                     TextColor="Black"
+                    Keyboard="Text"
                     />
 
                 <Entry
@@ -30,6 +31,7 @@
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,0,0"
                     TextColor="Black"
+                    Keyboard="Text"
                     />
 
                 <Entry
@@ -38,6 +40,7 @@
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,0,0"
                     TextColor="Black"
+                    Keyboard="Text"
                     />
 
                 <Entry
@@ -46,6 +49,7 @@
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,0,0"
                     TextColor="Black"
+                    Keyboard="Numeric"
                     />
 
                 <Entry
@@ -54,6 +58,7 @@
                     HorizontalOptions="FillAndExpand"
                     Margin="0,0,0,20"
                     TextColor="Black"
+                    Keyboard="Numeric"
                     />
 
                 <Button

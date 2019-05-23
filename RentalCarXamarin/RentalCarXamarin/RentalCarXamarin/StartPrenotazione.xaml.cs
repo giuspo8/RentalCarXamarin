@@ -32,15 +32,13 @@ namespace RentalCarXamarin
 
         public void DatePickerDateSelected(object sender, DateChangedEventArgs e)
         {
+            //prende il valore dal data picker
             DateStringRit = DatePickerRit.Date.ToString();
         }
         public void DatePickerDateSelectedRic(object sender, DateChangedEventArgs e)
         {
+            //prende il valore dal data picker
             DateStringRic = DatePickerRic.Date.ToString();
-        }
-        public void PickerSelectedIndexChanged(object sender, EventArgs e)
-        {
-            //= PickerRit.Items[PickerRit.SelectedIndex];
         }
         public async void carchoosing(object sender, EventArgs e)
         {
@@ -85,7 +83,7 @@ namespace RentalCarXamarin
 
                 foreach (KeyValuePair<string, Stazioni> entry in result_stazioni)
                 {
-                    //Stazione s = new Stazione(entry.Value.stationName);
+                    //aggiunge i valori presi dal server al picker delle stazioni
                     PickerRit.Items.Add(entry.Value.Stazione);
                     PickerRic.Items.Add(entry.Value.Stazione);
                 }

@@ -36,7 +36,6 @@ namespace RentalCarXamarin
         }
         
 
-        //parte da spostare in un'altro file eventualmente
         public class Car : BindableObject
         {
             //definiamo la classe car che estende la classe BindableObject 

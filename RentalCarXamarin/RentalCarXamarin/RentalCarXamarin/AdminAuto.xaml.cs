@@ -25,18 +25,23 @@ namespace RentalCarXamarin
 
         public async void insertCarButton(object sender, EventArgs e)
         {
+            //al click del bottone per inserire le auto
+            //controlla prima che qualcuno dei campi non sia vuoto
             if (modelloEntry.Text.Equals("")|| classeEntry.Text.Equals("") || cambioEntry.Text.Equals("") ||
                 numeroEntry.Text.Equals("") || prezzoEntry.Text.Equals(""))
             {
+                //nel caso affermativo manda un alert
                 await DisplayAlert("Attenzione", "Per favore riempire tutti i campi", "OK");
             }
             else
             {
+                //altrimenti si salva i valori letti dalle varie entry
                 String model = modelloEntry.Text;
                 String classCar = classeEntry.Text;
                 String shift = cambioEntry.Text;
                 int number = Int32.Parse(numeroEntry.Text);
                 Double price = Double.Parse(prezzoEntry.Text);
+                //li passa al metodo
                 insertCar(new ServerRequest("http://rentalcar.altervista.org/aggiungi_auto.php"), model,
                     classCar,shift,number,price);
             }
@@ -44,12 +49,14 @@ namespace RentalCarXamarin
 
         public async void deleteCarButton(object sender, EventArgs e)
         {
+            //se la entry del modello è vuota manda un alert
             if (modelloEntry.Text.Equals(""))
                 {
                     await DisplayAlert("Attenzione", "Per favore inserire il modello da rimuovere", "OK");
                 }
             else
             {
+                //altrimenti salva il valore dell'entry in una variabile e lo manda al metodo
                 String model = modelloEntry.Text;
                 deleteCar(new ServerRequest("http://rentalcar.altervista.org/elimina_auto.php"), model);
             }
@@ -57,12 +64,15 @@ namespace RentalCarXamarin
 
         public async void deleteCar(ServerRequest sr, String model)
         {
-
+            //salviamo in una variabile l'url completo della richiesta compresa di variabile da mandare al server
             string URL_Param = "?Modello=" + model;
             var response = await sr._client.GetAsync(sr.URL + URL_Param);
+            //se la richiesta ha avuto successo
             if (response.IsSuccessStatusCode)
             {
+                //prende il contenuto della risposta(trasformata in un Task di stringhe) e lo trasforma in stringa
                 string responseText = response.Content.ReadAsStringAsync().Result.ToString();
+                //chiama il metodo delete result
                 Delete_Result(responseText);
             }
             else { await DisplayAlert("Attenzione", "Nothing retrieved from the server", "OK"); }
@@ -71,9 +81,10 @@ namespace RentalCarXamarin
 
         public async void insertCar(ServerRequest sr, String model,String classCar,String shift,int number,double price)
         {
-
+            //salviamo in una variabile l'url completo della richiesta compresa di variabile da mandare al server
             string URL_Param = "?Modello=" + model+ "&Classe=" + classCar+ "&PrezzoGg=" + price+
                 "&Cambio=" + shift+ "&NrPasseggeri=" + number;
+            //idem sopra
             var response = await sr._client.GetAsync(sr.URL + URL_Param);
             if (response.IsSuccessStatusCode)
             {
@@ -86,6 +97,7 @@ namespace RentalCarXamarin
 
         public void Delete_Result(string ans)
         {
+            //se la risposta è positiva ce lo comunica
             if (ans == "1")
             {
                 DisplayAlert("Risultato cancellazione", "Cancellazione effettuata", "OK");

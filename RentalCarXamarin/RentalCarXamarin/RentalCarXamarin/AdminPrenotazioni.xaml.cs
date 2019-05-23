@@ -25,15 +25,22 @@ namespace RentalCarXamarin
             if (response.IsSuccessStatusCode)
             {
                 var result = response.Content.ReadAsStringAsync().Result;
+                //usiamo un metodo che ci deserializza l'oggetto che va a leggere nel json di risposta dal server
+                //e ce lo salva un dizionario chiave oggetto
                 Dictionary<string, Reservation> result_reservations = JsonConvert.DeserializeObject<Dictionary<string, Reservation>>(result);
+                //creiamo una lista di reservations
                 List<Reservation> reservationsList = new List<Reservation>();
 
+                //per ogni elemento che trova come coppia chiave oggetto
                 foreach (KeyValuePair<string, Reservation> entry in result_reservations)
                 {
+                    //lo aggiunge alla lista
                     reservationsList.Add(new Reservation(entry.Value.ID, entry.Value.StazioneRit, entry.Value.StazioneRic,
                     entry.Value.Macchina, entry.Value.DataRitiro, entry.Value.DataRestituzione,
                     entry.Value.Pagamento,entry.Value.Email,entry.Value.Prezzo));
                 }
+                //impostiamo la lista come source della listview di Xaml
+                //di cui facciamo il Binding su Xaml
                 listView.ItemsSource = reservationsList;
             }
             else { await DisplayAlert("Attenzione", "Nothing retrieved from the server", "OK"); }
