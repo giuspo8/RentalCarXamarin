@@ -16,5 +16,41 @@ namespace RentalCarXamarin
 		{
 			InitializeComponent ();
 		}
-	}
+
+        public void adminloginButton(object sender, EventArgs e)
+        {
+            check_admin(new ServerRequest("http://rentalcar.altervista.org/leggiAdmin.php"));
+
+        }
+
+        public async void backToHomeButton(object sender, EventArgs e)
+        {
+            //toglie tutte le pagine dallo stack e va alla pagina iniziale
+            await this.Navigation.PopToRootAsync();
+        }
+
+        public async void check_admin(ServerRequest sr)
+        {
+            string URL_Param = "?email=" + emailEntry.Text + "&password=" + passwordEntry.Text;
+            var response = await sr._client.PostAsync(sr.URL + URL_Param, null);
+            if (response.IsSuccessStatusCode)
+            {
+                string responseText = response.Content.ReadAsStringAsync().Result.ToString();
+                if (responseText.Equals("[]"))
+                {
+                    await DisplayAlert("Attenzione", "L'email o la password inserite sono errate", "OK");
+                }
+                else
+                {
+                            await this.Navigation.PushAsync(new Admin_buttons());
+
+                }
+
+            }
+            else
+            {
+                //Debug.WriteLine("Error while inserting User in Post mode");
+            }
+        }
+    }
 }

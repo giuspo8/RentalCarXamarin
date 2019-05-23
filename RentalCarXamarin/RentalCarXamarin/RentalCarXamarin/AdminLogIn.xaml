@@ -37,12 +37,13 @@
                 
                 <Button
                     FontAttributes="Bold"
-                    Text="Entra"
+                    Text="Login"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="End"
                     WidthRequest="150"
+                    Clicked="adminloginButton"
                     />
 
                 <ImageButton
@@ -51,6 +52,7 @@
                     WidthRequest="50"
                     HorizontalOptions="End"
                     VerticalOptions="End"
+                    Clicked="backToHomeButton"
                     />
             </StackLayout>
         </ScrollView>

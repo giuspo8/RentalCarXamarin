@@ -43,7 +43,7 @@ namespace RentalCarXamarin
 
         public async void adminButton(object sender, EventArgs e)
         {
-            await this.Navigation.PushAsync(new AreaAdmin());
+            await this.Navigation.PushAsync(new AdminLogIn());
         }
     }
 

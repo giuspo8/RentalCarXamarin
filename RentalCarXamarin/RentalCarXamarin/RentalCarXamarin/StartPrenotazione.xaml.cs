@@ -15,7 +15,6 @@ namespace RentalCarXamarin
 	{
         string DateStringRit = "";
         string DateStringRic = "";
-        string Stazione = "";
         public StartPrenotazione ()
 		{
 			InitializeComponent ();

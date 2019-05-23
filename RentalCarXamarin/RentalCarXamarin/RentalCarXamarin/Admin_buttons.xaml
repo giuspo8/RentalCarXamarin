@@ -23,6 +23,7 @@
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="150"
                     VerticalOptions="Start"
+                    Clicked="adminReservationsButton"
                     />
 
                 <Button
@@ -33,6 +34,7 @@
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="150"
                     VerticalOptions="Start"
+                    Clicked="adminStationsButton"
                     />
 
                 <Button
@@ -42,6 +44,7 @@
                     TextColor="Black"
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="150"
+                    Clicked="adminCarButton"
                     VerticalOptions="StartAndExpand"
                     />
 

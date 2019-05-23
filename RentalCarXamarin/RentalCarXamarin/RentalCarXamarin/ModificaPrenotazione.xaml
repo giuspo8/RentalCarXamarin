@@ -95,9 +95,6 @@
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                        <Label Text="OraRit"
-                                            HorizontalOptions="Start"
-                                            TextColor="black" />
 
                                     </StackLayout>
 
@@ -132,10 +129,6 @@
                                                 FontAttributes="Bold"/>
 
                                         <Label Text="{Binding DataRestituzione}"
-                                            HorizontalOptions="Start"
-                                            TextColor="black" />
-
-                                        <Label Text="OraRic"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -190,6 +183,9 @@
                                                 FontAttributes="Bold"/>
 
                                         <Label Text="{Binding Prezzo}"
+                                            HorizontalOptions="Start"
+                                            TextColor="black" />
+                                        <Label Text="€"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 

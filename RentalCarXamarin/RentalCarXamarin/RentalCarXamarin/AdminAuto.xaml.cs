@@ -20,7 +20,7 @@ namespace RentalCarXamarin
         public async void backButton(object sender, EventArgs e)
         {
             //al click del bottone backbutton va ad AreaAdmin
-            await this.Navigation.PushAsync(new AreaAdmin());
+            await this.Navigation.PushAsync(new Admin_buttons());
         }
 
         public async void insertCarButton(object sender, EventArgs e)
