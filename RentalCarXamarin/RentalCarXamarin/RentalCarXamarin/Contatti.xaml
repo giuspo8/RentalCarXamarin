@@ -26,20 +26,29 @@
                         Source="phone1.png"
                         HeightRequest="50"
                         WidthRequest="50"
+                        Clicked="phone"
                         />
 
                     <Label
                         Text="Telefono:"
                         FontAttributes="Bold"
                         Margin="5,15,0,0"
-                        TextColor="Black"
-                        />
+                        TextColor="Black">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="Tapephone_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
 
                     <Label
                         Text="071-86753"
                         Margin="0,15,0,0"
-                        TextColor="Black"
-                        />
+                        TextColor="Black">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="Tapephoneoff_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
 
                 </StackLayout>
 
@@ -62,14 +71,22 @@
                         Text="E-mail:"
                         FontAttributes="Bold"
                         Margin="5,15,0,0"
-                        TextColor="Black"
-                        />
+                        TextColor="Black">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="Tapemail_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
 
                     <Label
                         Text="rcm_mail@gmail.com"
                         Margin="0,15,0,0"
-                        TextColor="Black"
-                        />
+                        TextColor="Black">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="Tapeemailoff_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
 
                 </StackLayout>
 
@@ -92,14 +109,22 @@
                         Text="Facebook:"
                         FontAttributes="Bold"
                         Margin="5,15,0,0"
-                        TextColor="Black"
-                        />
+                        TextColor="Black">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="Tapeface_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
 
                     <Label
                         Text="RCM official"
                         Margin="0,15,0,0"
-                        TextColor="Black"
-                        />
+                        TextColor="Black">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="Tapefaceoff_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
 
                 </StackLayout>
 
@@ -122,15 +147,22 @@
                         Text="Instagram:"
                         FontAttributes="Bold"
                         Margin="5,15,0,0"
-                        TextColor="Black"
-                        />
+                        TextColor="Black">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Tapped="Tapeinsta_Tapped"/>
+                    </Label.GestureRecognizers>
+                    </Label>
 
                     <Label
                         Text="RCM official"
                         Margin="0,15,0,0"
-                        TextColor="Black"
-                        />
-
+                        TextColor="Black">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="Tapeinstaoff_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
                 </StackLayout>
 
                 <ImageButton

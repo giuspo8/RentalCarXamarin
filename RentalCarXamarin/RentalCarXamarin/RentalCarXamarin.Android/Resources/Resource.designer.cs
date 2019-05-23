@@ -26,6 +26,28 @@ namespace RentalCarXamarin.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglecollapseicon = global::RentalCarXamarin.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
+			global::Syncfusion.XForms.Android.Core.Resource.Drawable.inputlayout_togglevisibleicon = global::RentalCarXamarin.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
+			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.layoutManager = global::RentalCarXamarin.Droid.Resource.Attribute.layoutManager;
+			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.reverseLayout = global::RentalCarXamarin.Droid.Resource.Attribute.reverseLayout;
+			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.spanCount = global::RentalCarXamarin.Droid.Resource.Attribute.spanCount;
+			global::Syncfusion.ListView.XForms.Android.Resource.Attribute.stackFromEnd = global::RentalCarXamarin.Droid.Resource.Attribute.stackFromEnd;
+			global::Syncfusion.ListView.XForms.Android.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::RentalCarXamarin.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Syncfusion.ListView.XForms.Android.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::RentalCarXamarin.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Syncfusion.ListView.XForms.Android.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::RentalCarXamarin.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Syncfusion.ListView.XForms.Android.Resource.Drawable.inputlayout_togglecollapseicon = global::RentalCarXamarin.Droid.Resource.Drawable.inputlayout_togglecollapseicon;
+			global::Syncfusion.ListView.XForms.Android.Resource.Drawable.inputlayout_togglevisibleicon = global::RentalCarXamarin.Droid.Resource.Drawable.inputlayout_togglevisibleicon;
+			global::Syncfusion.ListView.XForms.Android.Resource.Id.item_touch_helper_previous_elevation = global::RentalCarXamarin.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.ApplicationName = global::RentalCarXamarin.Droid.Resource.String.ApplicationName;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.Hello = global::RentalCarXamarin.Droid.Resource.String.Hello;
+			global::Syncfusion.ListView.XForms.Android.Resource.String.Load_More = global::RentalCarXamarin.Droid.Resource.String.Load_More;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView = global::RentalCarXamarin.Droid.Resource.Styleable.RecyclerView;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_android_descendantFocusability = global::RentalCarXamarin.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_android_orientation = global::RentalCarXamarin.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_layoutManager = global::RentalCarXamarin.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_reverseLayout = global::RentalCarXamarin.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_spanCount = global::RentalCarXamarin.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Syncfusion.ListView.XForms.Android.Resource.Styleable.RecyclerView_stackFromEnd = global::RentalCarXamarin.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::RentalCarXamarin.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -2351,26 +2373,26 @@ namespace RentalCarXamarin.Droid
 			// aapt resource value: 0x7f020056
 			public const int avd_hide_password = 2130837590;
 			
-			// aapt resource value: 0x7f020145
-			public const int avd_hide_password_1 = 2130837829;
-			
-			// aapt resource value: 0x7f020146
-			public const int avd_hide_password_2 = 2130837830;
-			
 			// aapt resource value: 0x7f020147
-			public const int avd_hide_password_3 = 2130837831;
+			public const int avd_hide_password_1 = 2130837831;
+			
+			// aapt resource value: 0x7f020148
+			public const int avd_hide_password_2 = 2130837832;
+			
+			// aapt resource value: 0x7f020149
+			public const int avd_hide_password_3 = 2130837833;
 			
 			// aapt resource value: 0x7f020057
 			public const int avd_show_password = 2130837591;
 			
-			// aapt resource value: 0x7f020148
-			public const int avd_show_password_1 = 2130837832;
-			
-			// aapt resource value: 0x7f020149
-			public const int avd_show_password_2 = 2130837833;
-			
 			// aapt resource value: 0x7f02014a
-			public const int avd_show_password_3 = 2130837834;
+			public const int avd_show_password_1 = 2130837834;
+			
+			// aapt resource value: 0x7f02014b
+			public const int avd_show_password_2 = 2130837835;
+			
+			// aapt resource value: 0x7f02014c
+			public const int avd_show_password_3 = 2130837836;
 			
 			// aapt resource value: 0x7f020058
 			public const int cinquecento = 2130837592;
@@ -2949,139 +2971,145 @@ namespace RentalCarXamarin.Droid
 			public const int ic_vol_type_tv_light = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int insta1 = 2130837784;
+			public const int inputlayout_togglecollapseicon = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int kadjar = 2130837785;
+			public const int inputlayout_togglevisibleicon = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int mercedes = 2130837786;
+			public const int insta1 = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int mercedesclassee = 2130837787;
+			public const int kadjar = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int mr_button_connected_dark = 2130837788;
+			public const int mercedes = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int mr_button_connected_light = 2130837789;
+			public const int mercedesclassee = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int mr_button_connecting_dark = 2130837790;
+			public const int mr_button_connected_dark = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int mr_button_connecting_light = 2130837791;
+			public const int mr_button_connected_light = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int mr_button_dark = 2130837792;
+			public const int mr_button_connecting_dark = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int mr_button_light = 2130837793;
+			public const int mr_button_connecting_light = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int mr_dialog_close_dark = 2130837794;
+			public const int mr_button_dark = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int mr_dialog_close_light = 2130837795;
+			public const int mr_button_light = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int mr_dialog_material_background_dark = 2130837796;
+			public const int mr_dialog_close_dark = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int mr_dialog_material_background_light = 2130837797;
+			public const int mr_dialog_close_light = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int mr_group_collapse = 2130837798;
+			public const int mr_dialog_material_background_dark = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int mr_group_expand = 2130837799;
+			public const int mr_dialog_material_background_light = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int mr_media_pause_dark = 2130837800;
+			public const int mr_group_collapse = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int mr_media_pause_light = 2130837801;
+			public const int mr_group_expand = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int mr_media_play_dark = 2130837802;
+			public const int mr_media_pause_dark = 2130837802;
 			
 			// aapt resource value: 0x7f02012b
-			public const int mr_media_play_light = 2130837803;
+			public const int mr_media_pause_light = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
-			public const int mr_media_stop_dark = 2130837804;
+			public const int mr_media_play_dark = 2130837804;
 			
 			// aapt resource value: 0x7f02012d
-			public const int mr_media_stop_light = 2130837805;
+			public const int mr_media_play_light = 2130837805;
 			
 			// aapt resource value: 0x7f02012e
-			public const int mr_vol_type_audiotrack_dark = 2130837806;
+			public const int mr_media_stop_dark = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-			public const int mr_vol_type_audiotrack_light = 2130837807;
+			public const int mr_media_stop_light = 2130837807;
 			
 			// aapt resource value: 0x7f020130
-			public const int navigation_empty_icon = 2130837808;
+			public const int mr_vol_type_audiotrack_dark = 2130837808;
 			
 			// aapt resource value: 0x7f020131
-			public const int notification_action_background = 2130837809;
+			public const int mr_vol_type_audiotrack_light = 2130837809;
 			
 			// aapt resource value: 0x7f020132
-			public const int notification_bg = 2130837810;
+			public const int navigation_empty_icon = 2130837810;
 			
 			// aapt resource value: 0x7f020133
-			public const int notification_bg_low = 2130837811;
+			public const int notification_action_background = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int notification_bg_low_normal = 2130837812;
+			public const int notification_bg = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int notification_bg_low_pressed = 2130837813;
+			public const int notification_bg_low = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int notification_bg_normal = 2130837814;
+			public const int notification_bg_low_normal = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int notification_bg_normal_pressed = 2130837815;
+			public const int notification_bg_low_pressed = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int notification_icon_background = 2130837816;
-			
-			// aapt resource value: 0x7f020143
-			public const int notification_template_icon_bg = 2130837827;
-			
-			// aapt resource value: 0x7f020144
-			public const int notification_template_icon_low_bg = 2130837828;
+			public const int notification_bg_normal = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int notification_tile_bg = 2130837817;
+			public const int notification_bg_normal_pressed = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int notify_panel_notification_icon_bg = 2130837818;
+			public const int notification_icon_background = 2130837818;
+			
+			// aapt resource value: 0x7f020145
+			public const int notification_template_icon_bg = 2130837829;
+			
+			// aapt resource value: 0x7f020146
+			public const int notification_template_icon_low_bg = 2130837830;
 			
 			// aapt resource value: 0x7f02013b
-			public const int panda = 2130837819;
+			public const int notification_tile_bg = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int passat = 2130837820;
+			public const int notify_panel_notification_icon_bg = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int peugstationwagon = 2130837821;
+			public const int panda = 2130837821;
 			
 			// aapt resource value: 0x7f02013e
-			public const int phone1 = 2130837822;
+			public const int passat = 2130837822;
 			
 			// aapt resource value: 0x7f02013f
-			public const int q5 = 2130837823;
+			public const int peugstationwagon = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int smart = 2130837824;
+			public const int phone1 = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int tooltip_frame_dark = 2130837825;
+			public const int q5 = 2130837825;
 			
 			// aapt resource value: 0x7f020142
-			public const int tooltip_frame_light = 2130837826;
+			public const int smart = 2130837826;
+			
+			// aapt resource value: 0x7f020143
+			public const int tooltip_frame_dark = 2130837827;
+			
+			// aapt resource value: 0x7f020144
+			public const int tooltip_frame_light = 2130837828;
 			
 			static Drawable()
 			{
@@ -4027,6 +4055,15 @@ namespace RentalCarXamarin.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f0a003d
+			public const int ApplicationName = 2131361853;
+			
+			// aapt resource value: 0x7f0a003c
+			public const int Hello = 2131361852;
+			
+			// aapt resource value: 0x7f0a003e
+			public const int Load_More = 2131361854;
 			
 			// aapt resource value: 0x7f0a0015
 			public const int abc_action_bar_home_description = 2131361813;

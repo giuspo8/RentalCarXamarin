@@ -10,13 +10,18 @@
                     Padding="0,0,0,0">
         <StackLayout
                 VerticalOptions="FillAndExpand"
-                HorizontalOptions="FillAndExpand">
+                HorizontalOptions="FillAndExpand"
+                Margin="0,0,0,0"
+                WidthRequest="1000">
 
             <ListView ItemsSource="{Binding Items}" 
                       ItemTapped="ListViewItemTapped"
-                      HorizontalOptions="CenterAndExpand"
-                      VerticalOptions="StartAndExpand"
-                      HeightRequest="200"/>
+                      VerticalOptions="FillAndExpand" 
+                      HorizontalOptions="FillAndExpand"
+                      HasUnevenRows="True"
+                      HeightRequest="9000"
+                      RowHeight="100"
+                      WidthRequest="200"/>
 
             <ImageButton
                     Source="home.png"
@@ -30,5 +35,6 @@
 
         </StackLayout>
     </ScrollView>
+
 
 </ContentPage>
