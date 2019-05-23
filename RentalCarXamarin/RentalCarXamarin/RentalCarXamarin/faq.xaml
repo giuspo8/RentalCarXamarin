@@ -4,37 +4,32 @@
              x:Class="RentalCarXamarin.faq"
              Title="FAQ">
 
-    <ScrollView VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    BackgroundColor="White"
-                    Padding="0,0,0,0">
-        <StackLayout
-                VerticalOptions="FillAndExpand"
-                HorizontalOptions="FillAndExpand"
-                Margin="0,0,0,0"
-                WidthRequest="1000">
+    <ListView 
+        x:Name="listfaq"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        ItemTapped="ListViewItemTapped"
+        HasUnevenRows="true" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        Orientation="Vertical"
+                        Margin="20,0,20,0">
 
-            <ListView ItemsSource="{Binding Items}" 
-                      ItemTapped="ListViewItemTapped"
-                      VerticalOptions="FillAndExpand" 
-                      HorizontalOptions="FillAndExpand"
-                      HasUnevenRows="True"
-                      HeightRequest="9000"
-                      RowHeight="100"
-                      WidthRequest="200"/>
-
-            <ImageButton
-                    Source="home.png"
-                    HeightRequest="50"
-                    WidthRequest="50"
-                    HorizontalOptions="End"
-                    VerticalOptions="End"
-                    Margin="0,20,20,20"
-                    Clicked="backToHomeButton"
-                    />
-
-        </StackLayout>
-    </ScrollView>
-
-
+                        <Label
+                            Margin="0,10,0,10"
+                            x:Name="Cella"
+                            Text="{Binding item}"
+                            TextColor="Black"
+                            FontSize="16"
+                            VerticalOptions="Center"
+                        />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>
