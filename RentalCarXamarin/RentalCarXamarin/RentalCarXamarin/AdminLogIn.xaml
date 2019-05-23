@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentalCarXamarin.AdminLogIn"
+             Title="Area amministratore">
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="White"
+                    Padding="0,0,0,0">
+
+            <StackLayout
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Margin="20,20,20,20"
+                Spacing="0">
+
+                <Entry
+                    Margin="0,0,0,0"
+                    x:Name="emailEntry"
+                    Placeholder="Inserire e-mail"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Keyboard="Email"
+                    />
+
+                <Entry
+                    Placeholder="Inserire password"
+                    x:Name="passwordEntry"
+                    WidthRequest="200"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    IsPassword="True"
+                    />
+
+                
+                <Button
+                    FontAttributes="Bold"
+                    Text="Entra"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="End"
+                    WidthRequest="150"
+                    />
+
+                <ImageButton
+                    Source="home.png"
+                    HeightRequest="50"
+                    WidthRequest="50"
+                    HorizontalOptions="End"
+                    VerticalOptions="End"
+                    />
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

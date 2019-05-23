@@ -11,13 +11,13 @@
                    HorizontalOptions="FillAndExpand"
                    VerticalOptions="FillAndExpand">
 
-                <ListView.ItemTemplate>
+            <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout BackgroundColor="White"
                              Orientation="Vertical"
                              VerticalOptions="StartAndExpand"
-                                             Spacing="5"
+                                             Spacing="0"
                              Margin="0,0,0,0">
 
                             <StackLayout
@@ -53,122 +53,121 @@
                                 <Label Text="{Binding StazioneRit}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
+                            </StackLayout>
 
-                                <StackLayout
+                            <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                    <Label
+                                <Label
                                                 HorizontalOptions="Start"
                                                 Text="Data ritiro:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="{Binding DataRitiro}"
+                                <Label Text="{Binding DataRitiro}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                    <Label Text="OraRit"
+                                <Label Text="OraRit"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                </StackLayout>
+                            </StackLayout>
 
-                                <StackLayout
+                            <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                    <Label
+                                <Label
                                                 HorizontalOptions="Start"
                                                 Text="Stazione riconsegna:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="{Binding StazioneRic}"
+                                <Label Text="{Binding StazioneRic}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                </StackLayout>
+                            </StackLayout>
 
-                                <StackLayout
+                            <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                    <Label
+                                <Label
                                                 HorizontalOptions="Start"
                                                 Text="Data riconsegna:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="{Binding DataRiconsegna}"
+                                <Label Text="{Binding DataRiconsegna}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                    <Label Text="OraRic"
+                                <Label Text="OraRic"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                </StackLayout>
+                            </StackLayout>
 
-                                <StackLayout
+                            <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                    <Label
+                                <Label
                                                 HorizontalOptions="Start"
                                                 Text="Macchina:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="{Binding Macchina}"
+                                <Label Text="{Binding Macchina}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                </StackLayout>
+                            </StackLayout>
 
-                                <StackLayout
+                            <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                    <Label
+                                <Label
                                                 HorizontalOptions="Start"
                                                 Text="Pagamento:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="{Binding Pagamento}"
+                                <Label Text="{Binding Pagamento}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
-                                </StackLayout>
+                            </StackLayout>
 
-                                <StackLayout
+                            <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
                                             Orientation="Horizontal"
                                             Spacing="5">
 
-                                    <Label
+                                <Label
                                                 HorizontalOptions="Start"
                                                 Text="Costo:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                    <Label Text="{Binding Prezzo}"
+                                <Label Text="{Binding Prezzo}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
-
-                                </StackLayout>
 
                             </StackLayout>
 
@@ -176,7 +175,7 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-            </ListView>
+        </ListView>
         
     </ContentPage.Content>
 </ContentPage>
