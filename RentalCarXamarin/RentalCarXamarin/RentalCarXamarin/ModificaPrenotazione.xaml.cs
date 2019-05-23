@@ -64,25 +64,22 @@ namespace RentalCarXamarin
                 }
                 else
                 {
-                    Dictionary<int, Reservation> result_reservation = JsonConvert.DeserializeObject<Dictionary<int, Reservation>>(result);
+                    Dictionary<String, Reservation> result_reservation = JsonConvert.DeserializeObject<Dictionary<String, Reservation>>(result);
                     List<Reservation> prenotationList = new List<Reservation>();
 
-                    foreach (KeyValuePair<int, Reservation> entry in result_reservation)
+                    foreach (KeyValuePair<String, Reservation> entry in result_reservation)
                     {
-                        prenotationList.Add(new Reservation
-                        {
-                            ID = entry.Value.ID,
-                            StazioneRit = entry.Value.StazioneRit,
-                            StazioneRic = entry.Value.StazioneRic,
-                            Macchina = entry.Value.Macchina,
-                            DataRitiro = entry.Value.DataRitiro,
-                            DataRestituzione = entry.Value.DataRestituzione,
-                            Pagamento = entry.Value.Pagamento,
-                            Email = entry.Value.Email,
-                            Prezzo = entry.Value.Prezzo
-                        });
+                        prenotationList.Add(new Reservation(entry.Value.ID,
+                            entry.Value.StazioneRit,
+                            entry.Value.StazioneRic,
+                            entry.Value.Macchina,
+                            entry.Value.DataRitiro,
+                            entry.Value.DataRestituzione,
+                            entry.Value.Pagamento,
+                            entry.Value.Email,
+                            entry.Value.Prezzo));
                     }
-                    listView.ItemsSource = prenotationList;
+                    listViewReservation.ItemsSource = prenotationList;
                 }
             }
             else { await DisplayAlert("Attenzione", "Nothing retrieved from the server", "OK"); }

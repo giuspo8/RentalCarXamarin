@@ -30,7 +30,7 @@
                     Keyboard="Numeric"
                     />
 
-                <ListView  x:Name="listView" 
+                <ListView  x:Name="listViewReservation" 
                            ItemTapped="ReservationTapped"
                            HasUnevenRows="True" 
                            HeightRequest="120">
@@ -131,7 +131,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                        <Label Text="{Binding DataRiconsegna}"
+                                        <Label Text="{Binding DataRestituzione}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
