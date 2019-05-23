@@ -34,9 +34,7 @@ namespace RentalCarXamarin
             //se non paghiamo ora mette alcuni campi invisibili
             if (!payment)
             {
-                CartaCredito.IsVisible = false;
-                DataScadenza.IsVisible = false;
-                CodiceSicurezza.IsVisible = false;
+                StackDataScadenza.IsVisible = false;
                 paynow = 0;
             }
             //impostiamo data minima per scadenza carta

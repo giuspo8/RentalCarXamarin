@@ -74,7 +74,7 @@
 
                 </StackLayout>
 
-                <ListView  x:Name="listView" ItemsSource="{Binding CarItems}" HasUnevenRows="True" HeightRequest="90">
+                <ListView  x:Name="listView"  HasUnevenRows="True" HeightRequest="90">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
@@ -84,7 +84,7 @@
 
                                     <StackLayout Orientation="Horizontal">
 
-                                        <Image Source="{Binding image}" 
+                                        <Image Source="{Binding Image}" 
                                            WidthRequest="100"
                                            HeightRequest="100"
                                            Margin="0,0,10,0"/>
@@ -94,7 +94,7 @@
                                         HorizontalOptions="Start"
                                         Spacing="0">
 
-                                            <Label Text="{Binding model}"
+                                            <Label Text="{Binding Model}"
                                         TextColor="Black"
                                         FontAttributes="Bold"/>
 
@@ -110,7 +110,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                                <Label Text="{Binding type}"
+                                                <Label Text="{Binding ClassCar}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -128,7 +128,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                                <Label Text="{Binding shift}"
+                                                <Label Text="{Binding Shift}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -145,7 +145,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                                <Label Text="{Binding numberOfPassengers}"
+                                                <Label Text="{Binding Number}"
                                             HorizontalOptions="Start"
                                             TextColor="black" />
 
@@ -166,7 +166,7 @@
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
 
-                                                <Label Text="{Binding price}"
+                                                <Label Text="{Binding Pricegg}"
                                                 HorizontalOptions="Start"
                                                 TextColor="black" />
 

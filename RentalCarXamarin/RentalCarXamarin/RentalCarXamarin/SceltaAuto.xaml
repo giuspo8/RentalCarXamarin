@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalCarXamarin.SceltaAuto"
-             Title="Sscelta auto">
+             Title="Scelta auto">
     <ContentPage.Content>
         <ListView  x:Name="listView"  ItemTapped="CarTapped" HasUnevenRows="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             <ListView.ItemTemplate>

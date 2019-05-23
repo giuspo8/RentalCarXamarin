@@ -50,15 +50,20 @@
                     Keyboard="Telephone"
                     />
 
-                <Entry
+                <StackLayout
+                    Orientation="Vertical"
+                    x:Name="StackDataScadenza"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Entry
                     VerticalOptions="Start"
                     x:Name="CartaCredito"
                     Placeholder="Numero carta di credito*"
                     HorizontalOptions="FillAndExpand"
                     Keyboard="Numeric"
                     />
-                
-                    <Entry
+
+                <Entry
                     VerticalOptions="Start"
                     Placeholder="Codice di sicurezza*"
                     x:Name="CodiceSicurezza"
@@ -66,26 +71,27 @@
                     Keyboard="Numeric"
                     />
 
-                <StackLayout
+                    <StackLayout
                     Orientation="Horizontal"
-                    x:Name="StackDataScadenza"
                     HorizontalOptions="FillAndExpand">
 
-                <Label
+                        <Label
                         Text="Data di scadenza: "
                         TextColor="Black"
                         FontSize="16"
                         Margin="0,10,0,0"
                         />
-                
-                <DatePicker
+
+                        <DatePicker
                     x:Name="DataScadenza"
                     HorizontalOptions="FillAndExpand"
                     Format="MM/yy"
                     FontSize="16"
                     TextColor="Black"
                     />
-                
+
+                    </StackLayout>
+
                 </StackLayout>
                 
                 <Label
