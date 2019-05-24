@@ -18,7 +18,7 @@
                              Orientation="Vertical"
                              VerticalOptions="StartAndExpand"
                                              Spacing="0"
-                             Margin="0,0,0,0">
+                             Margin="10,0,0,0">
                             <StackLayout
                                             VerticalOptions="Start"
                                             HorizontalOptions="StartAndExpand"
