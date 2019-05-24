@@ -52,6 +52,23 @@
 
                                         <Label
                                                 HorizontalOptions="Start"
+                                                Text="ID:"
+                                                TextColor="Black"
+                                                FontAttributes="Bold"/>
+
+                                        <Label Text="{Binding ID}"
+                                            HorizontalOptions="Start"
+                                            TextColor="black" />
+
+                                    </StackLayout>
+                                    <StackLayout
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="StartAndExpand"
+                                            Orientation="Horizontal"
+                                            Spacing="5">
+
+                                        <Label
+                                                HorizontalOptions="Start"
                                                 Text="Utente:"
                                                 TextColor="Black"
                                                 FontAttributes="Bold"/>
