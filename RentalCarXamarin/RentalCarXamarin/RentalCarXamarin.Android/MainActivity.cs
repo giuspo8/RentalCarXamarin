@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace RentalCarXamarin.Droid
 {
-    [Activity(Label = "RCMx", Icon = "@drawable/car_prova", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "RCMx", Icon = "@drawable/car_prova2", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
