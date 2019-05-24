@@ -45,7 +45,17 @@
                     HorizontalOptions="CenterAndExpand"
                     WidthRequest="150"
                     Clicked="adminCarButton"
-                    VerticalOptions="StartAndExpand"
+                    VerticalOptions="Start"
+                    />
+
+                <Button
+                    FontAttributes="Bold"
+                    Text="Home"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="150"
+                    VerticalOptions="Start"
                     />
 
             </StackLayout>
