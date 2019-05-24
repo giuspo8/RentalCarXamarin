@@ -95,7 +95,7 @@ namespace RentalCarXamarin
                     read_id(new ServerRequest("http://rentalcar.altervista.org/leggi_id.php"),
                         email, dateRetire, dateRestitution);
                 }
-                catch(JsonSerializationException er)
+                catch(JsonException er)
                 {
                     await DisplayAlert("Attenzione", "Per favore riprovare", "OK");
                 }

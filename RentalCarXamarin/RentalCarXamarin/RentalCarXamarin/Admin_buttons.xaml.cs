@@ -37,5 +37,12 @@ namespace RentalCarXamarin
             await this.Navigation.PushAsync(new AdminStazioni());
 
         }
+
+        public async void backToHomeButton(object sender, EventArgs e)
+        {
+            //ritorno alla home
+            await this.Navigation.PopToRootAsync();
+
+        }
     }
 }
