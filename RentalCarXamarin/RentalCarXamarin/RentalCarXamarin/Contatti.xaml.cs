@@ -30,58 +30,19 @@ namespace RentalCarXamarin
         public void instagram(object sender, EventArgs e)
         {
             //apre instagram
-            Xamarin.Forms.Device.OpenUri(new Uri("https://www.instagram.com/?hl=it"));
+            Xamarin.Forms.Device.OpenUri(new Uri("https://www.instagram.com"));
         }
         public void facebook(object sender, EventArgs e)
         {
             //apre facebook
-            Xamarin.Forms.Device.OpenUri(new Uri("https://it-it.facebook.com/"));
+            Xamarin.Forms.Device.OpenUri(new Uri("https://www.facebook.com"));
         }
-        public void gmail(object sender, EventArgs e)
+        public void email(object sender, EventArgs e)
         {
             //apre gmail
-            Xamarin.Forms.Device.OpenUri(new Uri("https://support.google.com/mail/answer/56256?hl=it"));
+            Xamarin.Forms.Device.OpenUri(new Uri("mailto:rcm_mail@gmail.com"));
         }
-        public void Tapemail_Tapped(object sender, EventArgs e)
-        {
-            //apre gmail
-            Xamarin.Forms.Device.OpenUri(new Uri("https://support.google.com/mail/answer/56256?hl=it"));
-        }
-        public void Tapephone_Tapped(object sender, EventArgs e)
-        {
-            //apre i contatti
-            Device.OpenUri(new Uri("tel:071-86753"));
-        }
-        public void Tapeface_Tapped(object sender, EventArgs e)
-        {
-            //apre facebook
-            Xamarin.Forms.Device.OpenUri(new Uri("https://it-it.facebook.com/"));
-        }
-        public void Tapeinsta_Tapped(object sender, EventArgs e)
-        {
-            //apre instagram
-            Xamarin.Forms.Device.OpenUri(new Uri("https://www.instagram.com/?hl=it"));
-        }
-        public void Tapeemailoff_Tapped(object sender, EventArgs e)
-        {
-            //apre gmail
-            Xamarin.Forms.Device.OpenUri(new Uri("https://support.google.com/mail/answer/56256?hl=it"));
-        }
-        public void Tapefaceoff_Tapped(object sender, EventArgs e)
-        {
-            //apre facebook
-            Xamarin.Forms.Device.OpenUri(new Uri("https://it-it.facebook.com/"));
-        }
-        public void Tapeinstaoff_Tapped(object sender, EventArgs e)
-        {
-            //apre instagram
-            Xamarin.Forms.Device.OpenUri(new Uri("https://www.instagram.com/?hl=it"));
-        }
-        public void Tapephoneoff_Tapped(object sender, EventArgs e)
-        {
-            //apre contatti
-            Device.OpenUri(new Uri("tel:071-86753"));
-        }
+        
     }
 
 }

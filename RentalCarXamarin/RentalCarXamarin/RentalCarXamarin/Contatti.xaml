@@ -36,7 +36,7 @@
                         TextColor="Black">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
-                                Tapped="Tapephone_Tapped"/>
+                                Tapped="phone"/>
                         </Label.GestureRecognizers>
                     </Label>
 
@@ -46,7 +46,7 @@
                         TextColor="Black">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
-                                Tapped="Tapephoneoff_Tapped"/>
+                                Tapped="phone"/>
                         </Label.GestureRecognizers>
                     </Label>
 
@@ -64,7 +64,7 @@
                         Source="email.png"
                         HeightRequest="50"
                         WidthRequest="50"
-                        Clicked="gmail"
+                        Clicked="email"
                         />
 
                     <Label
@@ -74,7 +74,7 @@
                         TextColor="Black">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
-                                Tapped="Tapemail_Tapped"/>
+                                Tapped="email"/>
                         </Label.GestureRecognizers>
                     </Label>
 
@@ -84,7 +84,7 @@
                         TextColor="Black">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
-                                Tapped="Tapeemailoff_Tapped"/>
+                                Tapped="email"/>
                         </Label.GestureRecognizers>
                     </Label>
 
@@ -112,7 +112,7 @@
                         TextColor="Black">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
-                                Tapped="Tapeface_Tapped"/>
+                                Tapped="facebook"/>
                         </Label.GestureRecognizers>
                     </Label>
 
@@ -122,7 +122,7 @@
                         TextColor="Black">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
-                                Tapped="Tapefaceoff_Tapped"/>
+                                Tapped="facebook"/>
                         </Label.GestureRecognizers>
                     </Label>
 
@@ -150,7 +150,7 @@
                         TextColor="Black">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer
-                                Tapped="Tapeinsta_Tapped"/>
+                                Tapped="instagram"/>
                     </Label.GestureRecognizers>
                     </Label>
 
@@ -160,7 +160,7 @@
                         TextColor="Black">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer
-                                Tapped="Tapeinstaoff_Tapped"/>
+                                Tapped="instagram"/>
                         </Label.GestureRecognizers>
                     </Label>
                 </StackLayout>
