@@ -12,7 +12,7 @@
         <StackLayout
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="FillAndExpand"
-                Margin="60,20,60,20"
+                Margin="50,10,50,10"
                 Spacing="10">
 
             <Button
