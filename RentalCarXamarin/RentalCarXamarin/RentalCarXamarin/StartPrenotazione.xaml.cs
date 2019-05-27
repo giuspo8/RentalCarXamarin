@@ -13,8 +13,8 @@ namespace RentalCarXamarin
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class StartPrenotazione : ContentPage
 	{
-        string DateStringRit = "";
-        string DateStringRic = "";
+        string DateStringRit;
+        string DateStringRic;
         public StartPrenotazione ()
 		{
 			InitializeComponent ();
@@ -24,22 +24,9 @@ namespace RentalCarXamarin
             DatePickerRic.SetValue(DatePicker.MinimumDateProperty, DateTime.Now.AddDays(1));
             //mette valori di default alle stazioni
             //per evitare controlli successivi
-            PickerRit.SelectedIndex = 0;
-            PickerRic.SelectedIndex = 0;
             getStations(new ServerRequest("http://rentalcar.altervista.org/leggi_stazioni.php"));
         }
 
-
-        public void DatePickerDateSelected(object sender, DateChangedEventArgs e)
-        {
-            //prende il valore dal data picker
-            DateStringRit = DatePickerRit.Date.ToString();
-        }
-        public void DatePickerDateSelectedRic(object sender, DateChangedEventArgs e)
-        {
-            //prende il valore dal data picker
-            DateStringRic = DatePickerRic.Date.ToString();
-        }
         public async void carchoosing(object sender, EventArgs e)
         {
             //se la data di ritiro supera quella di riconsegna ci avverte dell'errore

@@ -119,7 +119,7 @@ namespace RentalCarXamarin
             string URL_Param = "?StazioneRit=" + rs.StazioneRit+ "&StazioneRic=" + rs.StazioneRic
                 + "&Macchina="+rs.Macchina+ "&Email="+rs.Email+ "&Pagamento="+rs.Pagamento+
                 "&DataRitiro="+rs.DataRitiro+ "&DataRestituzione="+rs.DataRestituzione+ "&Prezzo="+rs.Prezzo;
-            var response = await sr._client.PostAsync(sr.URL + URL_Param, null);
+            var response = await sr._client.GetAsync(sr.URL + URL_Param);
             if (response.IsSuccessStatusCode)
             {
                 string responseText = response.Content.ReadAsStringAsync().Result.ToString();

@@ -213,6 +213,7 @@
                     WidthRequest="50"
                     HorizontalOptions="End"
                     VerticalOptions="End"
+                    Clicked="backToHomeButton"
                     />
                     </StackLayout>
 

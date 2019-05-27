@@ -16,8 +16,7 @@ namespace RentalCarXamarin
         public faq()
         {
             InitializeComponent();
-            List<ListItem> listItems = new List<ListItem>();
-            listItems = new List<ListItem> {
+            List<ListItem> listItems = new List<ListItem> {
                 new ListItem {item="Dopo aver prenotato, è possibile cambiare la vettura scelta ?",index=0},
                 new ListItem {item= "Cosa succede se la macchina non viene riconsegnata nei tempi previsti ?",index=1},
                 new ListItem {item = "Di che cosa ho bisogno per noleggiare un' auto ?",index=2},

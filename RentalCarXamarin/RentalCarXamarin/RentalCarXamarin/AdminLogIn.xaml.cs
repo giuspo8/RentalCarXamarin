@@ -32,7 +32,7 @@ namespace RentalCarXamarin
         public async void check_admin(ServerRequest sr)
         {
             string URL_Param = "?email=" + emailEntry.Text + "&password=" + passwordEntry.Text;
-            var response = await sr._client.PostAsync(sr.URL + URL_Param, null);
+            var response = await sr._client.GetAsync(sr.URL + URL_Param);
             if (response.IsSuccessStatusCode)
             {
                 string responseText = response.Content.ReadAsStringAsync().Result.ToString();
@@ -43,7 +43,7 @@ namespace RentalCarXamarin
                 }
                 else
                 {
-                            await this.Navigation.PushAsync(new Admin_buttons());
+                   await this.Navigation.PushAsync(new Admin_buttons());
 
                 }
 

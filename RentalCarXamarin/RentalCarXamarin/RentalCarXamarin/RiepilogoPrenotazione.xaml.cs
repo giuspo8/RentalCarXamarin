@@ -64,5 +64,12 @@ namespace RentalCarXamarin
             //va alla pagina per il pagamento settando il paynow a false
             await this.Navigation.PushAsync(new PagaOra());
         }
+
+        public async void backToHomeButton(object sender, EventArgs e)
+        {
+            //ritorno alla home
+            await this.Navigation.PopToRootAsync();
+
+        }
     }
 }

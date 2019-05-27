@@ -116,7 +116,7 @@ namespace RentalCarXamarin
             }
             else
             {
-                DisplayAlert("Risultato inserimento", "Inserimento errato. Check your query", "OK");
+                DisplayAlert("Errore", "Il modello è già presente", "OK");
             }
         }
     }
