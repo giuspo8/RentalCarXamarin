@@ -32,26 +32,34 @@ namespace RentalCarXamarin
         public async void check_admin(ServerRequest sr)
         {
             string URL_Param = "?email=" + emailEntry.Text + "&password=" + passwordEntry.Text;
-            var response = await sr._client.GetAsync(sr.URL + URL_Param);
-            if (response.IsSuccessStatusCode)
+            String a = emailEntry.Text;
+            if (a.Contains("@") && a.Contains(".") && !(a.Contains(" ")) && !(a.Contains("\"")))
             {
-                string responseText = response.Content.ReadAsStringAsync().Result.ToString();
-                //se la query ci da in risposta l'insieme vuoto
-                if (responseText.Equals("[]"))
-                {
-                    await DisplayAlert("Attenzione", "L'email o la password inserite sono errate", "OK");
-                }
+                var response = await sr._client.GetAsync(sr.URL + URL_Param);
+                if (response.IsSuccessStatusCode)
+                    {
+                        string responseText = response.Content.ReadAsStringAsync().Result.ToString();
+                         //se la query ci da in risposta l'insieme vuoto
+                        if (responseText.Equals("[]"))
+                            {
+                                 await DisplayAlert("Attenzione", "L'email o la password inserite sono errate", "OK");
+                            }
+                        else
+                            {
+                                await this.Navigation.PushAsync(new Admin_buttons());
+                            }
+                    }
                 else
-                {
-                   await this.Navigation.PushAsync(new Admin_buttons());
-
-                }
-
+                    {
+                        //Debug.WriteLine("Error while inserting User in Post mode");
+                    }
             }
             else
             {
-                //Debug.WriteLine("Error while inserting User in Post mode");
+                await DisplayAlert("Attentzione", "Email non corretta", "OK");
             }
+
+            
         }
     }
 }

@@ -34,8 +34,15 @@ namespace RentalCarXamarin
                 //trasforma l'id letto come stringa dall'entry in un int
                 int id = Int32.Parse(idEntry.Text);
                 String email = emailEntry.Text;
-                search_reservation(new ServerRequest("http://rentalcar.altervista.org/cerca_prenotazione.php"), email, id);
-                 }
+                if (email.Contains("@") && email.Contains(".") && !(email.Contains(" ")) && !(email.Contains("\"")))
+                {
+                    search_reservation(new ServerRequest("http://rentalcar.altervista.org/cerca_prenotazione.php"), email, id);
+                }
+                else
+                {
+                    await DisplayAlert("Errore", "Email non corretta", "OK");
+                }
+            }
         }
 
         public async void ReservationTapped(object sender, ItemTappedEventArgs e)

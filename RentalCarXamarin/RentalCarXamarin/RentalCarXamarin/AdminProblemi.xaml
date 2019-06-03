@@ -14,7 +14,7 @@
 
                         <StackLayout Orientation="Horizontal"
                                          HorizontalOptions="StartAndExpand"
-                                     Margin="10,5,0,5">
+                                     Margin="10,5,10,5">
 
                             <Label
                                 TextColor="Black"

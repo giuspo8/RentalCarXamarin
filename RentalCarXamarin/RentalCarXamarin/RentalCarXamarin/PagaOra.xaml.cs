@@ -61,6 +61,10 @@ namespace RentalCarXamarin
             {
                 await DisplayAlert("Attenzione", "Per favore riempire tutti i campi", "OK");
             }
+            else if (!(emailEntry.Text.Contains("@") && emailEntry.Text.Contains(".") && !(emailEntry.Text.Contains(" ")) && !(emailEntry.Text.Contains("\""))))
+                {
+                await DisplayAlert("Attenzione", "Email non corretta", "OK");
+            }
             else
             {
             
