@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RentalCarXamarin.AdminProblemi"
-             x:Name="Visualizza problemi">
+             Title="Visualizza problemi">
     <ContentPage.Content>
         <ListView  x:Name="listView" 
                    HasUnevenRows="True" 
@@ -18,7 +18,7 @@
 
                             <Label
                                 TextColor="Black"
-                                Text="lol"
+                                Text="{Binding Problema}"
                                 VerticalOptions="Start"
                                 HorizontalOptions="StartAndExpand"
                                 />

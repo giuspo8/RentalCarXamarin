@@ -24,6 +24,13 @@ namespace RentalCarXamarin
 
         }
 
+        public async void adminProblemsButton(object sender, EventArgs e)
+        {
+            //andiamo alla page prenotazioni
+            await this.Navigation.PushAsync(new AdminProblemi());
+
+        }
+
         public async void adminCarButton(object sender, EventArgs e)
         {
             //andiamo alla page auto
