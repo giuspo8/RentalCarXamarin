@@ -4,40 +4,39 @@
              x:Class="RentalCarXamarin.faq"
              Title="FAQ">
 
-    <ListView 
-        x:Name="listfaq"
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="FillAndExpand"
-        ItemsSource="{Binding LE}"
-        HasUnevenRows="true" >
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="FillAndExpand"
-                        Orientation="Vertical"
-                        Margin="10,15,10,15">
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding List_element}"
+              CachingStrategy="RecycleElement"
+              HasUnevenRows="True"
+              SelectedItem="{Binding SelectedItem}">
 
-                        <Label
-                            Margin="0,0,0,0"
-                            x:Name="Cella"
-                            Text="{Binding item}"
-                            TextColor="Black"
-                            FontSize="16"
-                            VerticalOptions="Center"
-                        />
-                        <Label
-                                Margin="0,0,0,0"
-                                x:Name="risposta"
-                                Text="{Binding rispo}"
-                                TextColor="DarkOrange"
-                                FontSize="16"
-                                VerticalOptions="Center"
-                                />
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="5">
+                            <Label Text="{Binding item}" 
+                               FontSize="Medium" 
+                               TextColor="Black"/>
+
+                            <Grid IsVisible="{Binding IsVisible}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1.0*"/>
+                                    <ColumnDefinition Width="0.5*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" 
+                                   Text="{Binding rispo}"
+                                   TextColor="Black"/>
+                            </Grid>
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </ContentPage.Content>
 </ContentPage>
