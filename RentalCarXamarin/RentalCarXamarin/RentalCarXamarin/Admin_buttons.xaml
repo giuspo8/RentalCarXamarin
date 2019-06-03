@@ -50,6 +50,16 @@
 
                 <Button
                     FontAttributes="Bold"
+                    Text="Problemi"
+                    BackgroundColor="#FF8C00"
+                    TextColor="Black"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="150"
+                    VerticalOptions="Start"
+                    />
+
+                <Button
+                    FontAttributes="Bold"
                     Text="Home"
                     BackgroundColor="#FF8C00"
                     TextColor="Black"
