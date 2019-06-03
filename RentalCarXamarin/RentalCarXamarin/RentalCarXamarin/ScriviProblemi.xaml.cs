@@ -48,7 +48,7 @@ namespace RentalCarXamarin
             }
         }
 
-        public void Insert_Result(string ans)
+        public async void Insert_Result(string ans)
         {
             if (ans == "1")
             {
@@ -58,6 +58,8 @@ namespace RentalCarXamarin
             {
                 DisplayAlert("Risultato inserimento", "Inserimento errato. Check your query", "OK");
             }
+            Task.Delay(2000);
+            await this.Navigation.PopToRootAsync();
         }
     }
 }

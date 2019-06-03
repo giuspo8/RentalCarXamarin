@@ -8,11 +8,10 @@ namespace RentalCarXamarin
     {
         public string URL;
         public HttpClient _client;
-        //public MainPage mainPage;
+
 
         public ServerRequest(string URL)
         {
-            //this.mainPage = mainPage;
             this.URL = URL;
             this._client = new HttpClient();
         }

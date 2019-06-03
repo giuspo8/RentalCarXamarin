@@ -27,8 +27,8 @@ namespace RentalCarXamarin
         {
             //al click del bottone per inserire le auto
             //controlla prima che qualcuno dei campi non sia vuoto
-            if (modelloEntry.Text.Equals("")|| classeEntry.Text.Equals("") || cambioEntry.Text.Equals("") ||
-                numeroEntry.Text.Equals("") || prezzoEntry.Text.Equals(""))
+            if (string.IsNullOrEmpty(modelloEntry.Text) || string.IsNullOrEmpty(classeEntry.Text) || string.IsNullOrEmpty(cambioEntry.Text) ||
+                string.IsNullOrEmpty(numeroEntry.Text) || string.IsNullOrEmpty(prezzoEntry.Text))
             {
                 //nel caso affermativo manda un alert
                 await DisplayAlert("Attenzione", "Per favore riempire tutti i campi", "OK");
@@ -50,7 +50,7 @@ namespace RentalCarXamarin
         public async void deleteCarButton(object sender, EventArgs e)
         {
             //se la entry del modello è vuota manda un alert
-            if (modelloEntry.Text.Equals(""))
+            if (string.IsNullOrEmpty(modelloEntry.Text))
                 {
                     await DisplayAlert("Attenzione", "Per favore inserire il modello da rimuovere", "OK");
                 }

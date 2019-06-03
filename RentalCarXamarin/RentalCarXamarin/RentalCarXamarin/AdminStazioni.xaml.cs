@@ -25,7 +25,7 @@ namespace RentalCarXamarin
 
         public async void aggiungiStazioneButton(object sender, EventArgs e)
         {
-            if (stationEntry.Text.Equals(""))
+            if (string.IsNullOrEmpty(stationEntry.Text))
             {
                 await DisplayAlert("Attenzione", "Per favore inserisci la stazione da inserire", "OK");
             }
@@ -38,7 +38,7 @@ namespace RentalCarXamarin
 
         public async void rimuoviStazioneButton(object sender, EventArgs e)
         {
-            if (stationEntry.Text.Equals(""))
+            if (string.IsNullOrEmpty(stationEntry.Text))
             {
                 await DisplayAlert("Attenzione", "Per favore inserisci la stazione da cancellare", "OK");
             }
