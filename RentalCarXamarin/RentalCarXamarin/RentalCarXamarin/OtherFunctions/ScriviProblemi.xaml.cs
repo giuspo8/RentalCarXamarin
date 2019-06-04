@@ -28,7 +28,15 @@ namespace RentalCarXamarin
                 DisplayAlert("Attenzione", "Per favore inserisci il tuo problema", "OK");
             }
             else {
-                send_problem(new ServerRequest("http://rentalcar.altervista.org/inserisci_problemi.php"));
+                if (editor.Text.Contains("\""))
+                {
+                    DisplayAlert("Attenzione", "Il Formato della Segnalazione non è valido", "OK");
+                }
+                else
+                {
+                    send_problem(new ServerRequest("http://rentalcar.altervista.org/inserisci_problemi.php"));
+                }
+                
             }
             
         }
