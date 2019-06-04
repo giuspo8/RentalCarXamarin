@@ -33,30 +33,37 @@ namespace RentalCarXamarin
         {
             string URL_Param = "?email=" + emailEntry.Text + "&password=" + passwordEntry.Text;
             String a = emailEntry.Text;
+            String p = passwordEntry.Text;
             if (a.Contains("@") && a.Contains(".") && !(a.Contains(" ")) && !(a.Contains("\"")))
             {
-                var response = await sr._client.GetAsync(sr.URL + URL_Param);
-                if (response.IsSuccessStatusCode)
+                if (!p.Contains(" ") && !p.Contains("\""))
+                    {
+                    var response = await sr._client.GetAsync(sr.URL + URL_Param);
+                    if (response.IsSuccessStatusCode)
                     {
                         string responseText = response.Content.ReadAsStringAsync().Result.ToString();
-                         //se la query ci da in risposta l'insieme vuoto
+                        //se la query ci da in risposta l'insieme vuoto
                         if (responseText.Equals("[]"))
-                            {
-                                 await DisplayAlert("Attenzione", "L'email o la password inserite sono errate", "OK");
-                            }
+                        {
+                            await DisplayAlert("Attenzione", "L'email o la password inserite sono errate", "OK");
+                        }
                         else
-                            {
-                                await this.Navigation.PushAsync(new Admin_buttons());
-                            }
+                        {
+                            await this.Navigation.PushAsync(new Admin_buttons());
+                        }
                     }
-                else
+                    else
                     {
                         //Debug.WriteLine("Error while inserting User in Post mode");
                     }
+                }
+                else
+                    await DisplayAlert("Attenzione", "Formato Password non valido", "OK");
+
             }
             else
             {
-                await DisplayAlert("Attentzione", "Email non corretta", "OK");
+                await DisplayAlert("Attenzione", "Formato Email non valido", "OK");
             }
 
             

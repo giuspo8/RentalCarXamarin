@@ -63,7 +63,7 @@ namespace RentalCarXamarin
             }
             else if (!(emailEntry.Text.Contains("@") && emailEntry.Text.Contains(".") && !(emailEntry.Text.Contains(" ")) && !(emailEntry.Text.Contains("\""))))
                 {
-                await DisplayAlert("Attenzione", "Email non corretta", "OK");
+                await DisplayAlert("Attenzione", "Formato Email non valido", "OK");
             }
             else
             {

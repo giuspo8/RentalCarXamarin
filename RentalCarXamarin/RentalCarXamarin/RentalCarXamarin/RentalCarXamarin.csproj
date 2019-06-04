@@ -17,49 +17,49 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="AdminAuto.xaml">
+    <EmbeddedResource Update="Admin\AdminAuto.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="AdminLogIn.xaml">
+    <EmbeddedResource Update="Admin\AdminLogIn.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="AdminPrenotazioni.xaml">
+    <EmbeddedResource Update="Admin\AdminPrenotazioni.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="AdminProblemi.xaml">
+    <EmbeddedResource Update="Admin\AdminProblemi.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="AdminStazioni.xaml">
+    <EmbeddedResource Update="Admin\AdminStazioni.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Admin_buttons.xaml">
+    <EmbeddedResource Update="Admin\Admin_buttons.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ConfermaEmail.xaml">
+    <EmbeddedResource Update="NewReservation\ConfermaEmail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Contatti.xaml">
+    <EmbeddedResource Update="OtherFunctions\Contatti.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="faq.xaml">
+    <EmbeddedResource Update="OtherFunctions\faq.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ModificaPrenotazione.xaml">
+    <EmbeddedResource Update="OtherFunctions\ModificaPrenotazione.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="PagaOra.xaml">
+    <EmbeddedResource Update="NewReservation\PagaOra.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="RiepilogoPrenotazione.xaml">
+    <EmbeddedResource Update="NewReservation\RiepilogoPrenotazione.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="SceltaAuto.xaml">
+    <EmbeddedResource Update="NewReservation\SceltaAuto.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ScriviProblemi.xaml">
+    <EmbeddedResource Update="OtherFunctions\ScriviProblemi.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="StartPrenotazione.xaml">
+    <EmbeddedResource Update="NewReservation\StartPrenotazione.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

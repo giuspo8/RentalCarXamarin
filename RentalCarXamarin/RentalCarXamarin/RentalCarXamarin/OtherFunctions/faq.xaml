@@ -13,9 +13,11 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Padding="5">
+                        <StackLayout Padding="5"
+                                     Margin="5,5,5,5">
                             <Label Text="{Binding item}" 
-                               FontSize="Medium" 
+                               FontSize="16" 
+                               FontAttributes="Bold"
                                TextColor="Black"/>
 
                             <Grid IsVisible="{Binding IsVisible}">
@@ -24,12 +26,13 @@
                                     <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="1.0*"/>
-                                    <ColumnDefinition Width="0.5*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <Label Grid.Row="0" Grid.Column="0" 
                                    Text="{Binding rispo}"
-                                   TextColor="Black"/>
+                                   Font="14"
+                                   TextColor="DarkBlue"/>
                             </Grid>
 
                         </StackLayout>

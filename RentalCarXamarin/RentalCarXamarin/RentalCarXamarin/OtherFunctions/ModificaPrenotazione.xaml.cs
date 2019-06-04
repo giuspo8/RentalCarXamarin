@@ -40,7 +40,7 @@ namespace RentalCarXamarin
                 }
                 else
                 {
-                    await DisplayAlert("Errore", "Email non corretta", "OK");
+                    await DisplayAlert("Errore", "Formato Email non valido", "OK");
                 }
             }
         }
